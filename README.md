@@ -34,3 +34,9 @@ It bridges the gap between **deterministic safety protocols** (hard-coded rules 
    pip install -r requirements.txt
 
    streamlit run app.py
+## ⚖️ License & Copyright
+**© 2026 [Your Name]. All Rights Reserved.**
+
+This software is the intellectual property of [Your Name]. 
+- **Academic Use:** Viewable for educational and evaluation purposes (e.g., PhD admissions).
+- **Commercial Use:** Strictly prohibited. No part of this code may be copied, modified, or sold without written permission from the author.
