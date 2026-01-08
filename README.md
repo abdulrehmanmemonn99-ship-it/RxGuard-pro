@@ -35,7 +35,7 @@ It bridges the gap between **deterministic safety protocols** (hard-coded rules 
 
    streamlit run app.py
 ## ⚖️ License & Copyright
-**© 2026 [Your Name]. All Rights Reserved.**
+**© 2026 [Abdul Rehman Memon]. All Rights Reserved.**
 
 This software is the intellectual property of Abdul Rehman Memon. 
 - **Academic Use:** Viewable for educational and evaluation purposes (e.g., PhD admissions).
