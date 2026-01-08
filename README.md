@@ -37,6 +37,6 @@ It bridges the gap between **deterministic safety protocols** (hard-coded rules 
 ## ⚖️ License & Copyright
 **© 2026 [Your Name]. All Rights Reserved.**
 
-This software is the intellectual property of [Your Name]. 
+This software is the intellectual property of [Abdul Rehman Memon]. 
 - **Academic Use:** Viewable for educational and evaluation purposes (e.g., PhD admissions).
 - **Commercial Use:** Strictly prohibited. No part of this code may be copied, modified, or sold without written permission from the author.
