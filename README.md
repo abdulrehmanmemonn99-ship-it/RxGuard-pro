@@ -1,10 +1,10 @@
 # RxGuard Ultimate 🛡️ |Clinical Decision Support System for Medication Safety 
 
-**RxGuard Ultimate**RxGuard Ultimate is a rule-based Clinical Decision Support System (CDSS) designed to assist pharmacists and clinicians in identifying common drug-related problems during prescription screening.
+**RxGuard Ultimate**RxGuard Ultimate is a **rule-based Clinical Decision Support System (CDSS)** designed to assist pharmacists and clinicians in identifying common drug-related problems during prescription screening.
 
-The current system implements transparent, explainable pharmacotherapy logic (e.g., renal dose adjustment rules, drug–drug interactions, contraindications, and IV preparation guidance).
+The current system implements **transparent and explainable pharmacotherapy logic**, including renal dose adjustment rules, drug–drug interactions, contraindications, and IV preparation guidance.
 
-Future development aims to explore the integration of machine learning and large language models to enhance clinical reasoning capabilities while preserving explainability.
+Future development aims to explore the integration of **machine learning and large language models** to enhance clinical reasoning capabilities while preserving explainability and clinical trust.
 
 ## 🚀 Key Features
 
