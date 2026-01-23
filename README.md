@@ -1,27 +1,36 @@
-# RxGuard Ultimate 🛡️ | AI-Powered Clinical Decision Support
+# RxGuard Ultimate 🛡️ |Clinical Decision Support System for Medication Safety 
 
-**RxGuard Ultimate** is a hybrid "Neuro-Symbolic" Clinical Decision Support System (CDSS) designed to assist pharmacists and clinicians in optimizing medication safety.
+**RxGuard Ultimate**RxGuard Ultimate is a rule-based Clinical Decision Support System (CDSS) designed to assist pharmacists and clinicians in identifying common drug-related problems during prescription screening.
 
-It bridges the gap between **deterministic safety protocols** (hard-coded rules for renal adjustments, interactions, and IV compatibility) and **Generative AI** (LLM-based clinical reasoning for complex case queries).
+The current system implements transparent, explainable pharmacotherapy logic (e.g., renal dose adjustment rules, drug–drug interactions, contraindications, and IV preparation guidance).
+
+Future development aims to explore the integration of machine learning and large language models to enhance clinical reasoning capabilities while preserving explainability.
 
 ## 🚀 Key Features
 
-### 1. 🏥 Clinical Analysis Engine (Deterministic)
-* **Renal Guard:** Automatically flags dose adjustments based on calculated CrCl/eGFR.
-* **Interaction Checker:** Detects critical drug-drug interactions (DDIs) and lifestyle conflicts.
-* **Contraindication & Allergy Safety:** Cross-references patient comorbidities and allergy history against formulary data.
+### 1. 🏥 Clinical Analysis Engine (Rule-Based)
+
+* **Renal Guard:** Automatically flags dose adjustments based on calculated CrCl/eGFR
+
+* **Interaction Checker:** Detects critical drug–drug interactions and lifestyle conflicts
+
+* **Contraindication & Allergy Safety:** Cross-references patient comorbidities and allergy history
 
 ### 2. 💉 Parenteral Intelligence
 * **IV Reconstitution Calculator:** Precise math for dilution, final concentration, and infusion rates.
 * **Stability & Compatibility:** Provides evidence-based data on diluents (NS vs D5W) and storage.
 
-### 3. 🤖 AI Clinical Copilot (Generative)
-* **Neuro-Symbolic Integration:** Uses GPT-4o to handle unstructured queries and complex clinical scenarios not covered by standard databases.
-* **Reasoning Engine:** capable of explaining *why* an interaction is occurring or suggesting alternatives based on recent guidelines.
+### 3. 🤖 🔬 Planned AI Extension (Future Work)
+
+**Exploration of LLM-assisted clinical query handling**
+
+**Potential integration of machine learning to support complex decision scenarios**
+
+**Focus on maintaining explainability and clinical trust**
 
 ## 🛠️ Tech Stack
 * **Frontend:** Streamlit (Python)
-* **AI/LLM:** OpenAI API (GPT-4o)
+* **Backend Logic**: Rule-based clinical decision engine
 * **OCR:** Tesseract (for reading prescription images)
 * **Deployment:** Streamlit Cloud
 
