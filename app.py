@@ -1120,6 +1120,56 @@ with tab1:
                 st.success(f"Detected: {', '.join([d.title() for d in found_drugs])}")
                 
                 # --- LOGIC ENGINE ---
+               # 0. LAB VALUE ALERTS
+# INR Check
+if inr >= 4.0:
+    safety_score -= 20
+    st.error(f"🚨 **CRITICAL — INR {inr}:** Supratherapeutic INR detected. Serious bleeding risk. Review all anticoagulants immediately.")
+    intervention_notes.append(f"CRITICAL: INR {inr} — Review anticoagulation urgently")
+elif inr >= 3.0:
+    safety_score -= 10
+    st.warning(f"⚠️ **INR {inr}:** Above therapeutic range. Monitor closely and review anticoagulant dosing.")
+    intervention_notes.append(f"High INR {inr} — Monitor anticoagulation")
+
+# ALT / Liver Check
+if alt >= 100:
+    safety_score -= 15
+    st.error(f"🚨 **Elevated ALT ({alt} U/L):** Significant hepatotoxicity risk. Review all hepatotoxic drugs in this prescription.")
+    for drug in found_drugs:
+        if drug_db[drug].get("hepatic_risk"):
+            st.error(f"   ⚠️ {drug.title()} is hepatotoxic — use with caution or avoid.")
+            intervention_notes.append(f"Hepatic Risk: {drug.title()} with ALT {alt}")
+elif alt >= 60:
+    safety_score -= 5
+    st.warning(f"⚠️ **ALT mildly elevated ({alt} U/L):** Monitor liver function. Caution with hepatotoxic drugs.")
+
+# Platelet Check
+if platelets < 50:
+    safety_score -= 20
+    st.error(f"🚨 **CRITICAL — Platelets {platelets}:** Severe thrombocytopenia. Avoid all antiplatelet and anticoagulant drugs.")
+    intervention_notes.append(f"CRITICAL: Platelets {platelets} — Avoid antiplatelets/anticoagulants")
+elif platelets < 100:
+    safety_score -= 10
+    st.warning(f"⚠️ **Low Platelets ({platelets}):** Increased bleeding risk. Use anticoagulants and NSAIDs with extreme caution.")
+    intervention_notes.append(f"Low Platelets {platelets} — Caution with anticoagulants")
+
+# Potassium Check
+if potassium >= 6.0:
+    safety_score -= 20
+    st.error(f"🚨 **CRITICAL — K+ {potassium} mEq/L:** Severe hyperkalemia. Avoid potassium-sparing diuretics, ACE inhibitors, ARBs, and potassium supplements immediately.")
+    intervention_notes.append(f"CRITICAL: K+ {potassium} — Severe hyperkalemia")
+elif potassium >= 5.5:
+    safety_score -= 10
+    st.warning(f"⚠️ **K+ {potassium} mEq/L:** Hyperkalemia detected. Review potassium-raising drugs in this prescription.")
+    intervention_notes.append(f"High K+ {potassium} — Review potassium-raising drugs")
+elif potassium <= 3.0:
+    safety_score -= 15
+    st.error(f"🚨 **CRITICAL — K+ {potassium} mEq/L:** Severe hypokalemia. High risk of cardiac arrhythmia — especially dangerous with Digoxin.")
+    intervention_notes.append(f"CRITICAL: K+ {potassium} — Severe hypokalemia")
+elif potassium <= 3.5:
+    safety_score -= 5
+    st.warning(f"⚠️ **K+ {potassium} mEq/L:** Mild hypokalemia. Monitor — increases Digoxin toxicity risk.")
+    intervention_notes.append(f"Low K+ {potassium} — Monitor electrolytes")
                 # 1. RENAL
                 if renal_function is not None:
                     for drug in found_drugs:
