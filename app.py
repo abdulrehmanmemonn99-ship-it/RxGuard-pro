@@ -1279,4 +1279,4 @@ with tab3:
 
 # --- 5. FOOTER ---
 st.markdown("---")
-st.caption("RxGuard Ultimate © 2026 | Clinical Decision Support System | Disclaimer: For Educational purpose only.")
+st.caption("RxGuard Ultimate © 2026 | Clinical Decision Support System | Disclaimer: This tool is decision support aid only, All alerts must be verified by the treating clinician. Do not modify therapy based solely on this output. Full clinical responsibility remains with the prescriber.")
