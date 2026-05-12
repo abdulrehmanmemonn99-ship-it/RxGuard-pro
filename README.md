@@ -13,7 +13,7 @@
 
 RxGuard is a Clinical Decision Support System (CDSS) designed to assist pharmacists and physicians in detecting drug-related problems at the point of prescribing. It performs multi-layered safety analysis on patient-specific prescriptions — combining patient demographics, laboratory values, comorbidities, and drug data to generate actionable clinical alerts.
 
-The system was independently designed and developed by **Abdul Rehman**, a PharmD student at **[Your University]**, Pakistan — with no institutional infrastructure — as a demonstration of applied clinical informatics and patient safety research.
+The system was independently designed and developed by **Abdul Rehman**, a PharmD student at **[Liaquat University of Medical and Health Sciences Jamshoro]**, Pakistan — with no institutional infrastructure — as a demonstration of applied clinical informatics and patient safety research.
 
 **Live deployment:** [rxguard-clinical.streamlit.app](https://rxguard-clinical.streamlit.app)
 
