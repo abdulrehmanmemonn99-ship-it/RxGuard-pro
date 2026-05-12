@@ -47,12 +47,77 @@ if not check_password():
 
 st.markdown("""
     <style>
+    /* ── Base ── */
     .stExpander { border: 1px solid #ddd; border-radius: 5px; background-color: #f0f2f6; }
     div[data-testid="stMetricValue"] { font-size: 1.4rem; }
-    .section-header { font-size: 1.2rem; font-weight: bold; color: #2e86c1; margin-top: 10px; }
+
+    /* ── Alert Cards ── */
+    .rxcard {
+        padding: 12px 16px;
+        border-radius: 8px;
+        margin-bottom: 10px;
+        border-left: 5px solid;
+        line-height: 1.6;
+    }
+    .rxcard-critical {
+        background-color: #fff0f0;
+        border-color: #c0392b;
+        color: #2c0b0b;
+    }
+    .rxcard-major {
+        background-color: #fff8ee;
+        border-color: #e67e22;
+        color: #3b1f00;
+    }
+    .rxcard-minor {
+        background-color: #fdfde7;
+        border-color: #f1c40f;
+        color: #3b3300;
+    }
+    .rxcard-info {
+        background-color: #eaf4fb;
+        border-color: #2980b9;
+        color: #0a2540;
+    }
+    .rxcard-lab {
+        background-color: #fef9e7;
+        border-color: #d4ac0d;
+        color: #3b2e00;
+    }
+    .rxcard-title {
+        font-weight: 700;
+        font-size: 0.95rem;
+        margin-bottom: 4px;
+    }
+    .rxcard-body { font-size: 0.9rem; }
+    .rxcard-meta {
+        font-size: 0.8rem;
+        margin-top: 6px;
+        opacity: 0.85;
+    }
+
+    /* ── Score Badge ── */
+    .score-badge {
+        display: inline-block;
+        padding: 6px 18px;
+        border-radius: 20px;
+        font-size: 1.3rem;
+        font-weight: 700;
+        margin-bottom: 8px;
+    }
+    .score-safe { background: #eafaf1; color: #1e8449; border: 2px solid #1e8449; }
+    .score-warn { background: #fef9e7; color: #b7950b; border: 2px solid #b7950b; }
+    .score-danger { background: #fdedec; color: #c0392b; border: 2px solid #c0392b; }
+
+    /* ── Mobile: stack columns ── */
+    @media (max-width: 768px) {
+        [data-testid="column"] { width: 100% !important; flex: 1 1 100% !important; }
+        .rxcard { padding: 10px 12px; }
+        .rxcard-title { font-size: 0.88rem; }
+        .rxcard-body { font-size: 0.83rem; }
+    }
     </style>
     """, unsafe_allow_html=True)
-
 # ============================================================
 # RXGUARD — DATABASE LOADER
 # ============================================================
