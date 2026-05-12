@@ -306,29 +306,27 @@ with tab1:
                             st.error(f"**CONTRAINDICATION:** {drug.title()} in {cond}")
                             intervention_notes.append(f"Contraindicated: {drug.title()} in {cond}")
 
-                # 5. INTERACTIONS
-                ddi_found = False
-                for i in range(len(found_drugs)):
-                    for j in range(i + 1, len(found_drugs)):
-                        d1, d2 = found_drugs[i], found_drugs[j]
-                        rule = interactions_db.get((d1, d2)) or interactions_db.get((d2, d1))
-                        if rule:
-                            ddi_found = True
-                            if rule['level'] == "CRITICAL": 
-                                safety_score -= 20
-                                st.error(f"**{d1.title()} + {d2.title()}:** {rule['msg']}")
-                            else: 
-                                safety_score -= 10
-                                st.warning(f"**{d1.title()} + {d2.title()}:** {rule['msg']}")
-                            intervention_notes.append(f"Interaction: {d1.title()} + {d2.title()}")
-                
-                # REPORT
-                st.divider()
-                m1, m2 = st.columns([1, 2])
-                with m1: st.metric("Safety Score", f"{max(0, safety_score)}/100")
-                with m2: 
-                    with st.expander("📋 Pharmacist Note"): st.code("\n".join(intervention_notes) if intervention_notes else "No significant issues found.")
-
+             # 5. INTERACTIONS
+ddi_found = False
+for i in range(len(found_drugs)):
+    for j in range(i + 1, len(found_drugs)):
+        d1, d2 = found_drugs[i], found_drugs[j]
+        rule = interactions_db.get((d1, d2)) or interactions_db.get((d2, d1))
+        if rule:
+            ddi_found = True
+            mechanism = rule.get("mechanism", "")
+            source = rule.get("source", "")
+            if rule['level'] == "CRITICAL":
+                safety_score -= 20
+                st.error(f"🚨 **CRITICAL — {d1.title()} + {d2.title()}:** {rule['msg']}")
+            else:
+                safety_score -= 10
+                st.warning(f"⚠️ **{rule['level']} — {d1.title()} + {d2.title()}:** {rule['msg']}")
+            if mechanism:
+                st.caption(f"🔬 **Mechanism:** {mechanism}")
+            if source:
+                st.caption(f"📖 **Source:** {source}")
+            intervention_notes.append(f"Interaction ({rule['level']}): {d1.title()} + {d2.title()} — {rule['msg']}")
 # ==========================================
 # TAB 2: PARENTERAL (IV) DILUTION
 # ==========================================
