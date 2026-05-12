@@ -1,0 +1,524 @@
+{
+  "warfarin|aspirin": {
+    "level": "CRITICAL",
+    "msg": "Significantly increased bleeding risk.",
+    "mechanism": "PD: Additive \u2014 anticoagulation (warfarin) combined with antiplatelet effect and GI mucosal damage (aspirin)",
+    "source": "Stockley's"
+  },
+  "ibuprofen|warfarin": {
+    "level": "CRITICAL",
+    "msg": "Severe GI bleeding risk.",
+    "mechanism": "PD: Additive bleeding + PK: CYP2C9 inhibition by ibuprofen increases warfarin plasma levels",
+    "source": "Stockley's"
+  },
+  "ibuprofen|lisinopril": {
+    "level": "Major",
+    "msg": "Reduced antihypertensive effect + Kidney Risk.",
+    "mechanism": "PD: NSAIDs reduce prostaglandin-mediated vasodilation, blunting ACE inhibitor effect and reducing renal perfusion",
+    "source": "BNF"
+  },
+  "lisinopril|lithium": {
+    "level": "Major",
+    "msg": "Lithium Toxicity Risk.",
+    "mechanism": "PK: ACE inhibitors reduce aldosterone \u2192 increased sodium reabsorption \u2192 reduced lithium renal excretion \u2192 toxicity",
+    "source": "Stockley's"
+  },
+  "amiodarone|digoxin": {
+    "level": "Major",
+    "msg": "Digoxin levels increase ~50%.",
+    "mechanism": "PK: Amiodarone inhibits P-glycoprotein (P-gp), reducing renal and biliary digoxin excretion",
+    "source": "DiPiro"
+  },
+  "ciprofloxacin|warfarin": {
+    "level": "Major",
+    "msg": "Increased anticoagulation effect.",
+    "mechanism": "PK: CYP1A2 inhibition + reduction of vitamin K-producing gut flora",
+    "source": "BNF 84"
+  },
+  "propranolol|salbutamol": {
+    "level": "Major",
+    "msg": "Antagonistic effect.",
+    "mechanism": "PD: Pharmacological antagonism \u2014 propranolol blocks \u03b22-adrenoceptors, directly opposing salbutamol bronchodilation",
+    "source": "Katzung"
+  },
+  "levothyroxine|warfarin": {
+    "level": "Major",
+    "msg": "Enhanced Warfarin effect.",
+    "mechanism": "PD: Thyroid hormone increases catabolism of vitamin K-dependent clotting factors, potentiating anticoagulation",
+    "source": "Stockley's"
+  },
+  "ibuprofen|methotrexate": {
+    "level": "CRITICAL",
+    "msg": "FATAL Toxicity \u2014 NSAIDs block MTX excretion.",
+    "mechanism": "PK: NSAIDs inhibit OAT3 (organic anion transporter) in renal tubules, blocking methotrexate excretion \u2192 toxic accumulation",
+    "source": "Stockley's"
+  },
+  "aspirin|methotrexate": {
+    "level": "CRITICAL",
+    "msg": "FATAL Toxicity \u2014 NSAIDs block MTX excretion.",
+    "mechanism": "PK: Aspirin inhibits renal tubular OAT3 transporter, blocking methotrexate excretion \u2192 toxic accumulation",
+    "source": "Stockley's"
+  },
+  "ciprofloxacin|theophylline": {
+    "level": "CRITICAL",
+    "msg": "Theophylline Toxicity \u2014 risk of seizures.",
+    "mechanism": "PK: Ciprofloxacin inhibits CYP1A2, the primary enzyme metabolising theophylline \u2192 2-3x rise in theophylline levels",
+    "source": "Stockley's"
+  },
+  "carbamazepine|erythromycin": {
+    "level": "Major",
+    "msg": "Carbamazepine toxicity risk.",
+    "mechanism": "PK: Erythromycin inhibits CYP3A4, the primary enzyme metabolising carbamazepine \u2192 elevated levels and toxicity",
+    "source": "BNF"
+  },
+  "gentamicin|vancomycin": {
+    "level": "Major",
+    "msg": "Synergistic Nephrotoxicity.",
+    "mechanism": "PD: Additive \u2014 both drugs cause proximal tubular damage; combined use increases nephrotoxicity significantly",
+    "source": "Sanford"
+  },
+  "phenytoin|warfarin": {
+    "level": "Major",
+    "msg": "Unstable INR.",
+    "mechanism": "PK: Biphasic \u2014 phenytoin initially inhibits CYP2C9 (raises INR), then induces it long-term (lowers INR); highly unpredictable",
+    "source": "Stockley's"
+  },
+  "apixaban|aspirin": {
+    "level": "Major",
+    "msg": "Increased bleeding risk; avoid unless benefit outweighs risk.",
+    "mechanism": "PD: Additive \u2014 anticoagulation (apixaban) plus antiplatelet effect (aspirin) increases serious bleeding risk",
+    "source": "BNF 84"
+  },
+  "apixaban|ibuprofen": {
+    "level": "CRITICAL",
+    "msg": "Severe bleeding risk \u2014 NSAIDs + DOAC combination.",
+    "mechanism": "PD: Additive bleeding \u2014 NSAID impairs platelet function and causes GI mucosal injury on top of anticoagulation",
+    "source": "BNF 84"
+  },
+  "apixaban|fluconazole": {
+    "level": "Major",
+    "msg": "Fluconazole increases apixaban levels (CYP3A4/P-gp inhibition).",
+    "mechanism": "PK: Fluconazole inhibits both CYP3A4 (metabolism) and P-gp (transport), significantly raising apixaban exposure",
+    "source": "Stockley's"
+  },
+  "aspirin|enoxaparin": {
+    "level": "Major",
+    "msg": "Increased bleeding risk.",
+    "mechanism": "PD: Additive \u2014 antiplatelet effect of aspirin combined with anticoagulant action of enoxaparin",
+    "source": "BNF 84"
+  },
+  "enoxaparin|ibuprofen": {
+    "level": "Major",
+    "msg": "Increased bleeding risk \u2014 NSAIDs impair platelet function.",
+    "mechanism": "PD: Additive \u2014 NSAID inhibits COX-1-mediated platelet aggregation on top of LMWH anticoagulation",
+    "source": "BNF 84"
+  },
+  "aspirin|heparin": {
+    "level": "Major",
+    "msg": "Increased bleeding risk.",
+    "mechanism": "PD: Additive \u2014 antiplatelet effect of aspirin potentiates anticoagulant action of heparin",
+    "source": "BNF 84"
+  },
+  "fluconazole|warfarin": {
+    "level": "CRITICAL",
+    "msg": "Fluconazole markedly increases INR \u2014 major bleeding risk.",
+    "mechanism": "PK: Fluconazole is a potent CYP2C9 inhibitor \u2014 substantially reduces warfarin (S-enantiomer) metabolism",
+    "source": "Stockley's"
+  },
+  "metronidazole|warfarin": {
+    "level": "CRITICAL",
+    "msg": "Metronidazole inhibits warfarin metabolism \u2014 INR rises sharply.",
+    "mechanism": "PK: Metronidazole inhibits CYP2C9 and CYP3A4, reducing warfarin metabolism; also inhibits gut flora vitamin K synthesis",
+    "source": "Stockley's"
+  },
+  "rifampicin|warfarin": {
+    "level": "CRITICAL",
+    "msg": "Rifampicin is a potent CYP inducer \u2014 warfarin levels fall dramatically; INR drops.",
+    "mechanism": "PK: Rifampicin is a potent inducer of CYP2C9 and CYP3A4 \u2014 dramatically accelerates warfarin metabolism, causing sub-therapeutic anticoagulation",
+    "source": "Stockley's"
+  },
+  "amiodarone|warfarin": {
+    "level": "CRITICAL",
+    "msg": "Amiodarone inhibits warfarin metabolism \u2014 risk of severe bleeding.",
+    "mechanism": "PK: Amiodarone (and active metabolite DEA) inhibit CYP2C9 \u2014 raises warfarin levels; effect persists weeks after amiodarone stopped",
+    "source": "Stockley's"
+  },
+  "sodium valproate|warfarin": {
+    "level": "Major",
+    "msg": "Valproate displaces warfarin and inhibits its metabolism \u2014 increased bleeding risk.",
+    "mechanism": "PK: Valproate displaces warfarin from plasma protein binding (albumin) and inhibits CYP2C9",
+    "source": "Stockley's"
+  },
+  "celecoxib|warfarin": {
+    "level": "Major",
+    "msg": "Celecoxib may enhance anticoagulant effect of warfarin.",
+    "mechanism": "PK: Celecoxib inhibits CYP2C9, reducing S-warfarin metabolism \u2192 increased anticoagulant effect",
+    "source": "BNF 84"
+  },
+  "amiodarone|bisoprolol": {
+    "level": "Major",
+    "msg": "Additive bradycardia and AV block risk.",
+    "mechanism": "PD: Additive \u2014 both drugs slow AV nodal conduction (amiodarone via K+ channel block; bisoprolol via \u03b21 blockade)",
+    "source": "BNF 84"
+  },
+  "amiodarone|metoprolol": {
+    "level": "Major",
+    "msg": "Increased risk of bradycardia and AV block.",
+    "mechanism": "PD: Additive AV nodal depression \u2014 amiodarone (class III) + beta blocker (class II) combination",
+    "source": "BNF 84"
+  },
+  "amiodarone|carvedilol": {
+    "level": "Major",
+    "msg": "Additive bradycardia and hypotension.",
+    "mechanism": "PD: Additive \u2014 beta blockade (carvedilol) + AV nodal slowing (amiodarone) + additive vasodilation \u2192 hypotension",
+    "source": "BNF 84"
+  },
+  "bisoprolol|verapamil": {
+    "level": "CRITICAL",
+    "msg": "Risk of asystole \u2014 never give together IV.",
+    "mechanism": "PD: Additive \u2014 beta blockade (bisoprolol) + calcium channel block on AV node (verapamil) \u2192 complete AV block, asystole",
+    "source": "BNF 84"
+  },
+  "metoprolol|salbutamol": {
+    "level": "Major",
+    "msg": "Beta blocker antagonises bronchodilator effect.",
+    "mechanism": "PD: Pharmacological antagonism \u2014 metoprolol blocks \u03b22-receptors in bronchi, opposing salbutamol bronchodilation",
+    "source": "Katzung"
+  },
+  "atenolol|verapamil": {
+    "level": "CRITICAL",
+    "msg": "Risk of complete heart block and asystole.",
+    "mechanism": "PD: Additive \u2014 atenolol blocks \u03b21 (AV node), verapamil blocks L-type Ca2+ channels (AV node) \u2192 asystole risk, especially IV",
+    "source": "BNF 84"
+  },
+  "amiodarone|ivabradine": {
+    "level": "Major",
+    "msg": "Additive bradycardia risk.",
+    "mechanism": "PD: Additive \u2014 both agents reduce heart rate (ivabradine via If current inhibition; amiodarone via multiple ion channels)",
+    "source": "BNF 84"
+  },
+  "fluconazole|ivabradine": {
+    "level": "Major",
+    "msg": "Azoles increase ivabradine levels via CYP3A4 inhibition.",
+    "mechanism": "PK: Fluconazole inhibits CYP3A4, the primary enzyme metabolising ivabradine \u2192 raised plasma levels \u2192 bradycardia",
+    "source": "BNF 84"
+  },
+  "clarithromycin|digoxin": {
+    "level": "Major",
+    "msg": "P-gp inhibition raises digoxin to toxic levels.",
+    "mechanism": "PK: Clarithromycin inhibits P-glycoprotein in gut and kidney, increasing digoxin absorption and reducing elimination",
+    "source": "Stockley's"
+  },
+  "digoxin|furosemide": {
+    "level": "Major",
+    "msg": "Furosemide-induced hypokalemia potentiates digoxin toxicity.",
+    "mechanism": "PD: Indirect \u2014 furosemide causes hypokalemia; low K+ increases digoxin binding to Na+/K+-ATPase \u2192 toxicity at normal digoxin levels",
+    "source": "Katzung"
+  },
+  "lisinopril|spironolactone": {
+    "level": "Major",
+    "msg": "Risk of life-threatening hyperkalemia.",
+    "mechanism": "PD: Additive \u2014 ACE inhibitor reduces aldosterone (retains K+); spironolactone blocks aldosterone receptors (retains K+)",
+    "source": "BNF 84"
+  },
+  "ramipril|spironolactone": {
+    "level": "Major",
+    "msg": "Risk of life-threatening hyperkalemia.",
+    "mechanism": "PD: Additive \u2014 ACE inhibitor + potassium-sparing diuretic combination; both reduce urinary K+ excretion",
+    "source": "BNF 84"
+  },
+  "captopril|spironolactone": {
+    "level": "Major",
+    "msg": "Risk of life-threatening hyperkalemia.",
+    "mechanism": "PD: Additive \u2014 ACE inhibitor + potassium-sparing diuretic; combined use significantly increases hyperkalemia risk",
+    "source": "BNF 84"
+  },
+  "lisinopril|potassium chloride": {
+    "level": "Major",
+    "msg": "Combined risk of hyperkalemia.",
+    "mechanism": "PD: Additive \u2014 ACE inhibitor reduces aldosterone-driven K+ excretion; exogenous KCl further raises serum K+",
+    "source": "BNF 84"
+  },
+  "ibuprofen|ramipril": {
+    "level": "Major",
+    "msg": "Reduced antihypertensive effect + acute kidney injury risk.",
+    "mechanism": "PD: NSAIDs inhibit prostaglandin synthesis, blunting ACE inhibitor vasodilation and reducing glomerular filtration",
+    "source": "BNF 84"
+  },
+  "ibuprofen|losartan": {
+    "level": "Major",
+    "msg": "Reduced antihypertensive effect + renal impairment risk.",
+    "mechanism": "PD: NSAIDs reduce prostaglandin-mediated renal perfusion, antagonising ARB antihypertensive effect",
+    "source": "BNF 84"
+  },
+  "clindamycin|metronidazole": {
+    "level": "Major",
+    "msg": "Additive risk of C. difficile colitis \u2014 avoid prolonged combined use.",
+    "mechanism": "PD: Additive microbiome disruption \u2014 both antibiotics severely disrupt colonic flora, increasing C. difficile overgrowth risk",
+    "source": "BNF 84"
+  },
+  "linezolid|tramadol": {
+    "level": "CRITICAL",
+    "msg": "Risk of serotonin syndrome \u2014 potentially fatal.",
+    "mechanism": "PD: Serotonergic synergism \u2014 linezolid is a weak MAO inhibitor (raises synaptic serotonin); tramadol inhibits serotonin reuptake",
+    "source": "Stockley's"
+  },
+  "linezolid|sertraline": {
+    "level": "CRITICAL",
+    "msg": "Risk of serotonin syndrome \u2014 AVOID.",
+    "mechanism": "PD: Serotonergic synergism \u2014 linezolid (MAO inhibition) + sertraline (SERT inhibition) \u2192 serotonin excess \u2192 potentially fatal",
+    "source": "Stockley's"
+  },
+  "lithium|metronidazole": {
+    "level": "Major",
+    "msg": "Metronidazole may reduce lithium clearance \u2014 toxicity risk.",
+    "mechanism": "PK: Metronidazole reduces renal lithium clearance by an uncertain mechanism; narrow therapeutic index makes this clinically significant",
+    "source": "Stockley's"
+  },
+  "amiodarone|fluconazole": {
+    "level": "CRITICAL",
+    "msg": "Both prolong QT \u2014 risk of Torsades de Pointes.",
+    "mechanism": "PD: Additive QT prolongation \u2014 amiodarone (IKr block) + fluconazole (hERG channel block) \u2192 Torsades de Pointes risk",
+    "source": "BNF 84"
+  },
+  "fluconazole|simvastatin": {
+    "level": "Major",
+    "msg": "Fluconazole increases statin levels \u2014 myopathy/rhabdomyolysis risk.",
+    "mechanism": "PK: Fluconazole inhibits CYP3A4, the primary enzyme metabolising simvastatin \u2192 elevated statin levels \u2192 myopathy",
+    "source": "Stockley's"
+  },
+  "fluconazole|ondansetron": {
+    "level": "Major",
+    "msg": "Both prolong QT \u2014 increased risk of arrhythmia.",
+    "mechanism": "PD: Additive QT prolongation \u2014 both drugs block hERG (IKr) cardiac potassium channels",
+    "source": "BNF 84"
+  },
+  "ciprofloxacin|ondansetron": {
+    "level": "Major",
+    "msg": "Additive QT prolongation risk.",
+    "mechanism": "PD: Additive \u2014 ciprofloxacin and ondansetron both inhibit cardiac hERG potassium channels \u2192 QTc prolongation",
+    "source": "BNF 84"
+  },
+  "amiodarone|azithromycin": {
+    "level": "CRITICAL",
+    "msg": "Both prolong QT \u2014 high risk of Torsades de Pointes.",
+    "mechanism": "PD: Additive QT prolongation \u2014 azithromycin (hERG block) + amiodarone (IKr block) \u2192 high risk of Torsades de Pointes",
+    "source": "BNF 84"
+  },
+  "azithromycin|warfarin": {
+    "level": "Major",
+    "msg": "Azithromycin may increase INR.",
+    "mechanism": "PK: Azithromycin reduces gut flora responsible for vitamin K synthesis; possible CYP3A4 inhibition",
+    "source": "BNF 84"
+  },
+  "metformin|rifampicin": {
+    "level": "Major",
+    "msg": "Rifampicin reduces metformin plasma levels.",
+    "mechanism": "PK: Rifampicin induces OCT1 (organic cation transporter 1), increasing hepatic metformin uptake and reducing systemic bioavailability",
+    "source": "Stockley's"
+  },
+  "dapagliflozin|rifampicin": {
+    "level": "Major",
+    "msg": "Rifampicin reduces dapagliflozin plasma levels via CYP induction.",
+    "mechanism": "PK: Rifampicin induces UGT1A9 and CYP3A4, accelerating dapagliflozin metabolism \u2192 reduced glycemic efficacy",
+    "source": "Stockley's"
+  },
+  "amlodipine|rifampicin": {
+    "level": "Major",
+    "msg": "Rifampicin reduces amlodipine efficacy significantly.",
+    "mechanism": "PK: Rifampicin induces CYP3A4 \u2014 the primary amlodipine metabolising enzyme \u2192 amlodipine AUC reduced by ~90%",
+    "source": "Stockley's"
+  },
+  "isoniazid|phenytoin": {
+    "level": "Major",
+    "msg": "Isoniazid inhibits phenytoin metabolism \u2014 risk of phenytoin toxicity.",
+    "mechanism": "PK: Isoniazid inhibits CYP2C19, the primary enzyme for phenytoin hydroxylation \u2192 raised phenytoin levels \u2192 nystagmus, ataxia",
+    "source": "Stockley's"
+  },
+  "carbamazepine|isoniazid": {
+    "level": "Major",
+    "msg": "Isoniazid inhibits carbamazepine metabolism \u2014 toxicity risk.",
+    "mechanism": "PK: Isoniazid inhibits CYP3A4, reducing carbamazepine clearance \u2192 toxicity; carbamazepine also induces isoniazid hepatotoxic metabolites",
+    "source": "BNF 84"
+  },
+  "furosemide|gentamicin": {
+    "level": "Major",
+    "msg": "Additive ototoxicity risk.",
+    "mechanism": "PD: Additive cochlear damage \u2014 both drugs are ototoxic; furosemide disrupts endocochlear potential, enhancing aminoglycoside uptake into hair cells",
+    "source": "Katzung"
+  },
+  "furosemide|lithium": {
+    "level": "Major",
+    "msg": "Furosemide reduces lithium excretion \u2014 toxicity risk.",
+    "mechanism": "PK: Furosemide-induced volume depletion stimulates proximal tubule sodium (and lithium) reabsorption \u2192 reduced lithium clearance",
+    "source": "Stockley's"
+  },
+  "potassium chloride|spironolactone": {
+    "level": "Major",
+    "msg": "High risk of dangerous hyperkalemia.",
+    "mechanism": "PD: Additive \u2014 spironolactone retains potassium by aldosterone blockade; exogenous KCl adds direct K+ load \u2192 severe hyperkalemia",
+    "source": "BNF 84"
+  },
+  "carbamazepine|sodium valproate": {
+    "level": "Major",
+    "msg": "Complex interaction \u2014 may reduce valproate levels and increase carbamazepine toxicity.",
+    "mechanism": "PK: Carbamazepine induces valproate metabolism (\u2193 valproate); valproate inhibits CBZ-epoxide hydrolase \u2192 accumulation of toxic CBZ-10,11-epoxide",
+    "source": "BNF 84"
+  },
+  "aspirin|sodium valproate": {
+    "level": "Major",
+    "msg": "Aspirin displaces valproate from protein binding \u2014 increased free drug and toxicity.",
+    "mechanism": "PK: Aspirin (at high doses) competes for albumin binding sites, displacing valproate \u2192 elevated free (active/toxic) valproate levels",
+    "source": "Stockley's"
+  },
+  "methotrexate|sodium valproate": {
+    "level": "Major",
+    "msg": "Risk of increased methotrexate toxicity.",
+    "mechanism": "PK: Valproate may reduce methotrexate renal clearance via OAT inhibition \u2192 elevated MTX levels and toxicity",
+    "source": "Stockley's"
+  },
+  "amiodarone|carbamazepine": {
+    "level": "Major",
+    "msg": "Carbamazepine reduces amiodarone levels.",
+    "mechanism": "PK: Carbamazepine is a potent CYP3A4 inducer \u2014 accelerates amiodarone (and DEA metabolite) metabolism \u2192 loss of antiarrhythmic efficacy",
+    "source": "BNF 84"
+  },
+  "metformin|alcohol": {
+    "level": "Major",
+    "msg": "Increased risk of lactic acidosis.",
+    "mechanism": "PD: Additive \u2014 alcohol inhibits hepatic lactate clearance; metformin reduces mitochondrial oxidative phosphorylation \u2192 combined lactic acidosis risk",
+    "source": "BNF 84"
+  },
+  "propranolol|regular insulin": {
+    "level": "Major",
+    "msg": "Propranolol masks hypoglycemia symptoms and prolongs hypoglycemic episodes.",
+    "mechanism": "PD: Propranolol blocks \u03b22-adrenoceptor-mediated glycogenolysis and masks tachycardia (the main hypoglycemia warning sign)",
+    "source": "Katzung"
+  },
+  "metformin|regular insulin": {
+    "level": "Minor",
+    "msg": "Additive blood glucose lowering; monitor for hypoglycemia.",
+    "mechanism": "PD: Additive \u2014 insulin reduces blood glucose via cellular uptake; metformin reduces hepatic glucose output \u2192 combined hypoglycemic effect",
+    "source": "DiPiro"
+  },
+  "dapagliflozin|furosemide": {
+    "level": "Major",
+    "msg": "Additive risk of dehydration and hypotension.",
+    "mechanism": "PD: Additive volume depletion \u2014 SGLT-2 inhibitor causes osmotic diuresis; loop diuretic causes natriuresis \u2192 combined dehydration/hypotension",
+    "source": "BNF 84"
+  },
+  "sertraline|tramadol": {
+    "level": "CRITICAL",
+    "msg": "Risk of serotonin syndrome.",
+    "mechanism": "PD: Serotonergic synergism \u2014 sertraline (SERT inhibition) + tramadol (serotonin/noradrenaline reuptake inhibition) \u2192 serotonin excess",
+    "source": "Stockley's"
+  },
+  "metoclopramide|tramadol": {
+    "level": "Major",
+    "msg": "Metoclopramide enhances tramadol absorption and effect.",
+    "mechanism": "PK: Metoclopramide accelerates gastric emptying \u2192 faster tramadol absorption; also possible additive CNS effects",
+    "source": "BNF 84"
+  },
+  "ketorolac|warfarin": {
+    "level": "CRITICAL",
+    "msg": "Significantly increased risk of serious GI bleeding.",
+    "mechanism": "PD: Additive \u2014 ketorolac inhibits platelet function and causes GI mucosal injury; warfarin anticoagulation amplifies bleeding severity",
+    "source": "Stockley's"
+  },
+  "enoxaparin|ketorolac": {
+    "level": "CRITICAL",
+    "msg": "Simultaneous use contraindicated \u2014 high bleeding risk.",
+    "mechanism": "PD: Additive \u2014 NSAID (platelet inhibition + GI damage) combined with LMWH anticoagulation \u2192 high haemorrhage risk",
+    "source": "BNF 84"
+  },
+  "heparin|ketorolac": {
+    "level": "CRITICAL",
+    "msg": "Simultaneous use contraindicated \u2014 high bleeding risk.",
+    "mechanism": "PD: Additive \u2014 NSAID impairs haemostasis and causes GI injury while heparin anticoagulates \u2192 contraindicated combination",
+    "source": "BNF 84"
+  },
+  "celecoxib|methotrexate": {
+    "level": "CRITICAL",
+    "msg": "COX-2 inhibitors reduce MTX excretion \u2014 toxicity risk.",
+    "mechanism": "PK: Celecoxib inhibits renal OAT3 transporter, reducing methotrexate tubular secretion \u2192 toxic drug accumulation",
+    "source": "Stockley's"
+  },
+  "isosorbide mononitrate|sildenafil": {
+    "level": "CRITICAL",
+    "msg": "ABSOLUTE CONTRAINDICATION \u2014 risk of fatal hypotension.",
+    "mechanism": "PD: Additive vasodilation \u2014 nitrates generate NO \u2192 cGMP; sildenafil inhibits PDE5 (cGMP breakdown) \u2192 catastrophic BP drop",
+    "source": "BNF 84"
+  },
+  "isosorbide dinitrate|sildenafil": {
+    "level": "CRITICAL",
+    "msg": "ABSOLUTE CONTRAINDICATION \u2014 risk of fatal hypotension.",
+    "mechanism": "PD: Additive NO/cGMP-mediated vasodilation \u2192 profound, potentially fatal hypotension",
+    "source": "BNF 84"
+  },
+  "nitroglycerin|sildenafil": {
+    "level": "CRITICAL",
+    "msg": "ABSOLUTE CONTRAINDICATION \u2014 risk of fatal hypotension.",
+    "mechanism": "PD: Additive NO/cGMP-mediated vasodilation \u2014 nitrate + PDE5 inhibitor \u2192 catastrophic vasodilation and hypotension",
+    "source": "BNF 84"
+  },
+  "hydralazine|metoprolol": {
+    "level": "Minor",
+    "msg": "Additive blood pressure lowering \u2014 monitor for hypotension.",
+    "mechanism": "PD: Additive antihypertensive effect \u2014 vasodilation (hydralazine) + reduced cardiac output (metoprolol beta blockade)",
+    "source": "DiPiro"
+  },
+  "amiodarone|haloperidol": {
+    "level": "CRITICAL",
+    "msg": "Additive QT prolongation \u2014 risk of Torsades de Pointes.",
+    "mechanism": "PD: Additive hERG/IKr blockade \u2014 both drugs are class IA/III QT-prolonging agents; combined use is high-risk",
+    "source": "BNF 84"
+  },
+  "haloperidol|metoclopramide": {
+    "level": "Major",
+    "msg": "Additive risk of extrapyramidal effects and neuroleptic malignant syndrome.",
+    "mechanism": "PD: Additive D2 receptor antagonism in basal ganglia and nigrostriatal pathway \u2192 EPS and NMS risk",
+    "source": "BNF 84"
+  },
+  "diazepam|metronidazole": {
+    "level": "Major",
+    "msg": "Metronidazole inhibits diazepam metabolism \u2014 increased sedation.",
+    "mechanism": "PK: Metronidazole inhibits CYP2C19, the primary enzyme hydroxylating diazepam \u2192 elevated levels \u2192 prolonged sedation",
+    "source": "Stockley's"
+  },
+  "fluconazole|midazolam": {
+    "level": "CRITICAL",
+    "msg": "Fluconazole markedly increases midazolam levels \u2014 risk of profound sedation.",
+    "mechanism": "PK: Fluconazole strongly inhibits CYP3A4, almost completely blocking midazolam first-pass and systemic metabolism \u2192 severe over-sedation",
+    "source": "Stockley's"
+  },
+  "clonazepam|sodium valproate": {
+    "level": "Major",
+    "msg": "May induce absence status \u2014 use with caution.",
+    "mechanism": "PD: Pharmacodynamic paradox \u2014 valproate raises CNS GABA; combination may precipitate absence status epilepticus in susceptible patients",
+    "source": "BNF 84"
+  },
+  "methotrexate|tocilizumab": {
+    "level": "Major",
+    "msg": "Combined immunosuppression \u2014 risk of serious infection.",
+    "mechanism": "PD: Additive immunosuppression \u2014 IL-6 receptor blockade (tocilizumab) + antiproliferative effect (methotrexate) \u2192 increased infection risk",
+    "source": "BNF 84"
+  },
+  "amiodarone|rosuvastatin": {
+    "level": "Major",
+    "msg": "Amiodarone inhibits rosuvastatin metabolism \u2014 myopathy risk.",
+    "mechanism": "PK: Amiodarone inhibits BCRP and OATP1B1 transporters, reducing hepatic rosuvastatin uptake and increasing plasma levels \u2192 myopathy",
+    "source": "BNF 84"
+  },
+  "calcium gluconate|digoxin": {
+    "level": "CRITICAL",
+    "msg": "IV calcium can precipitate digoxin toxicity and arrhythmia.",
+    "mechanism": "PD: Additive \u2014 both calcium and digoxin increase intracellular Ca2+ in cardiac cells; IV calcium raises extracellular Ca2+ \u2192 potentiates digoxin arrhythmogenicity",
+    "source": "Katzung"
+  },
+  "pregabalin|tramadol": {
+    "level": "Major",
+    "msg": "Additive CNS and respiratory depression.",
+    "mechanism": "PD: Additive CNS depression \u2014 pregabalin (VGCC inhibition \u2192 reduced excitatory neurotransmission) + tramadol (opioid + monoaminergic) \u2192 sedation and respiratory risk",
+    "source": "BNF 84"
+  }
+}

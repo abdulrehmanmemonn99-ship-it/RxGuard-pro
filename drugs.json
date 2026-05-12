@@ -1,0 +1,1618 @@
+{
+  "methotrexate": {
+    "class": "Antimetabolite",
+    "indication": "RA, Psoriasis, Cancer",
+    "adr": "Pulmonary fibrosis, hepatotoxicity, bone marrow suppression.",
+    "adr_source": "BNF 84: Section 10.1.3",
+    "hepatic_risk": true,
+    "contra_diseases": [
+      "Active Infection",
+      "Liver Disease",
+      "Immunodeficiency"
+    ],
+    "preg_cat": "X",
+    "lifestyle_risk": [
+      "Alcohol"
+    ],
+    "renal_logic": [
+      {
+        "cutoff": 50,
+        "msg": "Reduce dose by 50%.",
+        "source": "BNF Renal"
+      },
+      {
+        "cutoff": 20,
+        "msg": "CONTRAINDICATED.",
+        "source": "Katzung"
+      }
+    ]
+  },
+  "phenytoin": {
+    "class": "Antiepileptic",
+    "indication": "Epilepsy",
+    "adr": "Gingival hypertrophy, nystagmus, ataxia.",
+    "adr_source": "Katzung Ch 24",
+    "hepatic_risk": true,
+    "contra_diseases": [
+      "Heart Block"
+    ],
+    "preg_cat": "D",
+    "lifestyle_risk": [
+      "Alcohol"
+    ],
+    "renal_logic": []
+  },
+  "theophylline": {
+    "class": "Xanthine",
+    "indication": "Asthma, COPD",
+    "adr": "Tachycardia, seizures, nausea.",
+    "adr_source": "BNF 84: Section 3.1.3",
+    "hepatic_risk": true,
+    "contra_diseases": [
+      "Arrhythmia",
+      "Peptic Ulcer"
+    ],
+    "preg_cat": "C",
+    "lifestyle_risk": [
+      "Smoking"
+    ],
+    "renal_logic": []
+  },
+  "carbamazepine": {
+    "class": "Antiepileptic",
+    "indication": "Epilepsy, Bipolar",
+    "adr": "Hyponatremia (SIADH), agranulocytosis.",
+    "adr_source": "BNF 84: Section 4.8.1",
+    "hepatic_risk": true,
+    "contra_diseases": [
+      "Bone Marrow Depression"
+    ],
+    "preg_cat": "D",
+    "lifestyle_risk": [
+      "Grapefruit Juice"
+    ],
+    "renal_logic": []
+  },
+  "vancomycin": {
+    "class": "Glycopeptide",
+    "indication": "MRSA Infection",
+    "adr": "Nephrotoxicity, Red Man Syndrome.",
+    "adr_source": "Sanford Guide",
+    "hepatic_risk": false,
+    "contra_diseases": [
+      "Hearing Loss"
+    ],
+    "preg_cat": "C",
+    "lifestyle_risk": [],
+    "renal_logic": [
+      {
+        "cutoff": 60,
+        "msg": "Check trough levels.",
+        "source": "Sanford"
+      },
+      {
+        "cutoff": 30,
+        "msg": "Renal Consult required.",
+        "source": "Renal Handbook"
+      }
+    ]
+  },
+  "warfarin": {
+    "class": "Anticoagulant",
+    "indication": "Anticoagulation",
+    "adr": "Hemorrhage.",
+    "adr_source": "BNF 84",
+    "hepatic_risk": true,
+    "contra_diseases": [
+      "Active Bleeding",
+      "Hypertension"
+    ],
+    "preg_cat": "X",
+    "lifestyle_risk": [
+      "Vitamin K Rich Diet",
+      "Alcohol"
+    ],
+    "renal_logic": []
+  },
+  "lisinopril": {
+    "class": "ACE Inhibitor",
+    "indication": "Hypertension, Heart Failure",
+    "adr": "Dry cough, hyperkalemia, angioedema.",
+    "adr_source": "DiPiro",
+    "hepatic_risk": false,
+    "contra_diseases": [
+      "Angioedema",
+      "Hyperkalemia"
+    ],
+    "preg_cat": "X",
+    "lifestyle_risk": [
+      "Potassium Supplements"
+    ],
+    "renal_logic": [
+      {
+        "cutoff": 30,
+        "msg": "Reduce dose. Initiate 2.5mg.",
+        "source": "BNF Renal"
+      }
+    ]
+  },
+  "digoxin": {
+    "class": "Antiarrhythmic",
+    "indication": "Heart Failure, Arrhythmia",
+    "adr": "Nausea, yellow halos, bradycardia.",
+    "adr_source": "Katzung",
+    "hepatic_risk": false,
+    "contra_diseases": [
+      "VFib"
+    ],
+    "preg_cat": "C",
+    "lifestyle_risk": [],
+    "renal_logic": [
+      {
+        "cutoff": 50,
+        "msg": "Reduce dose 50%.",
+        "source": "Katzung"
+      }
+    ]
+  },
+  "amiodarone": {
+    "class": "Antiarrhythmic",
+    "indication": "Arrhythmia",
+    "adr": "Pulmonary fibrosis, thyroid dysfunction, hepatotoxicity.",
+    "adr_source": "BNF 84",
+    "hepatic_risk": true,
+    "contra_diseases": [
+      "Thyroid Dysfunction"
+    ],
+    "preg_cat": "D",
+    "lifestyle_risk": [
+      "Grapefruit Juice"
+    ],
+    "renal_logic": []
+  },
+  "propranolol": {
+    "class": "Beta Blocker",
+    "indication": "Hypertension, Anxiety",
+    "adr": "Bradycardia, bronchospasm, fatigue.",
+    "adr_source": "Katzung",
+    "hepatic_risk": true,
+    "contra_diseases": [
+      "Asthma",
+      "COPD",
+      "Bradycardia"
+    ],
+    "preg_cat": "C",
+    "lifestyle_risk": [],
+    "renal_logic": []
+  },
+  "amoxicillin": {
+    "class": "Penicillin",
+    "indication": "Bacterial Infection",
+    "adr": "Diarrhea, rash, hypersensitivity.",
+    "adr_source": "BNF 84",
+    "hepatic_risk": false,
+    "contra_diseases": [
+      "Penicillin Allergy"
+    ],
+    "preg_cat": "B",
+    "lifestyle_risk": [],
+    "renal_logic": [
+      {
+        "cutoff": 30,
+        "msg": "Max 500mg BID.",
+        "source": "BNF 84"
+      }
+    ]
+  },
+  "gentamicin": {
+    "class": "Aminoglycoside",
+    "indication": "Gram-negative Infection",
+    "adr": "Nephrotoxicity, ototoxicity.",
+    "adr_source": "Katzung",
+    "hepatic_risk": false,
+    "contra_diseases": [
+      "Myasthenia Gravis"
+    ],
+    "preg_cat": "D",
+    "lifestyle_risk": [],
+    "renal_logic": [
+      {
+        "cutoff": 60,
+        "msg": "Extend dosing interval.",
+        "source": "Sanford"
+      },
+      {
+        "cutoff": 30,
+        "msg": "Avoid unless essential; therapeutic drug monitoring required.",
+        "source": "Renal Handbook"
+      }
+    ]
+  },
+  "ciprofloxacin": {
+    "class": "Fluoroquinolone",
+    "indication": "Urinary/Respiratory Infection",
+    "adr": "Tendonitis, QT prolongation, C. difficile risk.",
+    "adr_source": "BNF 84",
+    "hepatic_risk": false,
+    "contra_diseases": [
+      "G6PD Deficiency"
+    ],
+    "preg_cat": "C",
+    "lifestyle_risk": [
+      "Dairy Products"
+    ],
+    "renal_logic": [
+      {
+        "cutoff": 30,
+        "msg": "Max 500mg daily.",
+        "source": "Renal Handbook"
+      }
+    ]
+  },
+  "ibuprofen": {
+    "class": "NSAID",
+    "indication": "Pain, Inflammation",
+    "adr": "GI bleeding, renal impairment, cardiovascular risk.",
+    "adr_source": "BNF 84",
+    "hepatic_risk": false,
+    "contra_diseases": [
+      "Peptic Ulcer",
+      "Heart Failure",
+      "CKD"
+    ],
+    "preg_cat": "C/D",
+    "lifestyle_risk": [
+      "Alcohol"
+    ],
+    "renal_logic": [
+      {
+        "cutoff": 30,
+        "msg": "Avoid use.",
+        "source": "Katzung"
+      }
+    ]
+  },
+  "aspirin": {
+    "class": "Antiplatelet / NSAID",
+    "indication": "Pain, Antiplatelet Therapy",
+    "adr": "GI ulceration, bleeding, Reye's syndrome in children.",
+    "adr_source": "BNF 84",
+    "hepatic_risk": false,
+    "contra_diseases": [
+      "Peptic Ulcer",
+      "Hemophilia"
+    ],
+    "preg_cat": "D",
+    "lifestyle_risk": [
+      "Alcohol"
+    ],
+    "renal_logic": []
+  },
+  "paracetamol": {
+    "class": "Analgesic / Antipyretic",
+    "indication": "Pain, Fever",
+    "adr": "Hepatotoxicity (overdose).",
+    "adr_source": "BNF 84",
+    "hepatic_risk": true,
+    "contra_diseases": [
+      "Severe Hepatic Failure"
+    ],
+    "preg_cat": "B",
+    "lifestyle_risk": [
+      "Alcohol"
+    ],
+    "renal_logic": []
+  },
+  "metformin": {
+    "class": "Biguanide",
+    "indication": "Type 2 Diabetes",
+    "adr": "Lactic acidosis, GI upset, B12 deficiency.",
+    "adr_source": "DiPiro",
+    "hepatic_risk": false,
+    "contra_diseases": [
+      "CKD",
+      "Metabolic Acidosis",
+      "Heart Failure"
+    ],
+    "preg_cat": "B",
+    "lifestyle_risk": [
+      "Alcohol"
+    ],
+    "renal_logic": [
+      {
+        "cutoff": 45,
+        "msg": "Max 1000mg daily.",
+        "source": "Guidelines"
+      },
+      {
+        "cutoff": 30,
+        "msg": "CONTRAINDICATED.",
+        "source": "BNF 84"
+      }
+    ]
+  },
+  "salbutamol": {
+    "class": "Beta2 Agonist",
+    "indication": "Asthma, COPD",
+    "adr": "Tremor, palpitations, hypokalemia.",
+    "adr_source": "BNF 84",
+    "hepatic_risk": false,
+    "contra_diseases": [
+      "Arrhythmia"
+    ],
+    "preg_cat": "C",
+    "lifestyle_risk": [],
+    "renal_logic": []
+  },
+  "lithium": {
+    "class": "Mood Stabilizer",
+    "indication": "Bipolar Disorder",
+    "adr": "Tremor, renal toxicity, hypothyroidism.",
+    "adr_source": "Katzung",
+    "hepatic_risk": false,
+    "contra_diseases": [
+      "Dehydration",
+      "CKD"
+    ],
+    "preg_cat": "D",
+    "lifestyle_risk": [
+      "Low Sodium Diet"
+    ],
+    "renal_logic": [
+      {
+        "cutoff": 50,
+        "msg": "Reduce dose; monitor levels closely.",
+        "source": "BNF 84"
+      },
+      {
+        "cutoff": 30,
+        "msg": "AVOID \u2014 high toxicity risk.",
+        "source": "Katzung"
+      }
+    ]
+  },
+  "levothyroxine": {
+    "class": "Thyroid Hormone",
+    "indication": "Hypothyroidism",
+    "adr": "Palpitations, anxiety, bone loss at high doses.",
+    "adr_source": "BNF 84",
+    "hepatic_risk": false,
+    "contra_diseases": [
+      "Thyrotoxicosis"
+    ],
+    "preg_cat": "A",
+    "lifestyle_risk": [
+      "Soy Products"
+    ],
+    "renal_logic": []
+  },
+  "omeprazole": {
+    "class": "PPI",
+    "indication": "PUD, GERD",
+    "adr": "GI upset, hypomagnesemia, C. difficile risk.",
+    "adr_source": "BNF 84",
+    "hepatic_risk": true,
+    "contra_diseases": [],
+    "preg_cat": "C",
+    "lifestyle_risk": [],
+    "renal_logic": []
+  },
+  "amlodipine": {
+    "class": "Calcium Channel Blocker",
+    "indication": "Hypertension, Angina",
+    "adr": "Peripheral edema, flushing, headache.",
+    "adr_source": "BNF 84",
+    "hepatic_risk": true,
+    "contra_diseases": [
+      "Cardiogenic Shock"
+    ],
+    "preg_cat": "C",
+    "lifestyle_risk": [
+      "Grapefruit Juice"
+    ],
+    "renal_logic": []
+  },
+  "bisoprolol": {
+    "class": "Beta Blocker (Selective)",
+    "indication": "Hypertension, Heart Failure, Angina",
+    "adr": "Bradycardia, fatigue, bronchospasm.",
+    "adr_source": "BNF 84",
+    "hepatic_risk": true,
+    "contra_diseases": [
+      "Asthma",
+      "COPD",
+      "Bradycardia",
+      "Cardiogenic Shock"
+    ],
+    "preg_cat": "C",
+    "lifestyle_risk": [],
+    "renal_logic": [
+      {
+        "cutoff": 20,
+        "msg": "Max 10mg daily; use with caution.",
+        "source": "BNF Renal"
+      }
+    ]
+  },
+  "metoprolol": {
+    "class": "Beta Blocker (Selective)",
+    "indication": "Hypertension, Heart Failure, MI",
+    "adr": "Bradycardia, dizziness, fatigue.",
+    "adr_source": "Katzung",
+    "hepatic_risk": true,
+    "contra_diseases": [
+      "Asthma",
+      "Bradycardia",
+      "Cardiogenic Shock"
+    ],
+    "preg_cat": "C",
+    "lifestyle_risk": [],
+    "renal_logic": []
+  },
+  "metoprolol succinate": {
+    "class": "Beta Blocker (Selective, Extended-Release)",
+    "indication": "Hypertension, Heart Failure, Angina",
+    "adr": "Bradycardia, dizziness, fatigue.",
+    "adr_source": "BNF 84",
+    "hepatic_risk": true,
+    "contra_diseases": [
+      "Asthma",
+      "Bradycardia",
+      "Cardiogenic Shock"
+    ],
+    "preg_cat": "C",
+    "lifestyle_risk": [],
+    "renal_logic": []
+  },
+  "carvedilol": {
+    "class": "Alpha/Beta Blocker",
+    "indication": "Heart Failure, Hypertension",
+    "adr": "Dizziness, bradycardia, hypotension.",
+    "adr_source": "DiPiro",
+    "hepatic_risk": true,
+    "contra_diseases": [
+      "Asthma",
+      "Bradycardia",
+      "Decompensated Heart Failure"
+    ],
+    "preg_cat": "C",
+    "lifestyle_risk": [],
+    "renal_logic": []
+  },
+  "atenolol": {
+    "class": "Beta Blocker (Selective)",
+    "indication": "Hypertension, Angina",
+    "adr": "Bradycardia, fatigue, cold extremities.",
+    "adr_source": "BNF 84",
+    "hepatic_risk": false,
+    "contra_diseases": [
+      "Asthma",
+      "COPD",
+      "Bradycardia"
+    ],
+    "preg_cat": "D",
+    "lifestyle_risk": [],
+    "renal_logic": [
+      {
+        "cutoff": 35,
+        "msg": "Reduce dose to 50mg daily.",
+        "source": "BNF Renal"
+      },
+      {
+        "cutoff": 15,
+        "msg": "Max 25mg daily.",
+        "source": "BNF Renal"
+      }
+    ]
+  },
+  "nebivolol": {
+    "class": "Beta Blocker (Selective, Vasodilatory)",
+    "indication": "Hypertension, Heart Failure",
+    "adr": "Headache, dizziness, bradycardia.",
+    "adr_source": "BNF 84",
+    "hepatic_risk": true,
+    "contra_diseases": [
+      "Asthma",
+      "Bradycardia",
+      "Severe Hepatic Impairment"
+    ],
+    "preg_cat": "C",
+    "lifestyle_risk": [],
+    "renal_logic": [
+      {
+        "cutoff": 30,
+        "msg": "Start at 1.25mg daily; titrate carefully.",
+        "source": "BNF Renal"
+      }
+    ]
+  },
+  "furosemide": {
+    "class": "Loop Diuretic",
+    "indication": "Heart Failure, Edema, Hypertension",
+    "adr": "Hypokalemia, hyponatremia, ototoxicity (high dose IV).",
+    "adr_source": "BNF 84",
+    "hepatic_risk": false,
+    "contra_diseases": [
+      "Anuria",
+      "Dehydration",
+      "Hypokalemia"
+    ],
+    "preg_cat": "C",
+    "lifestyle_risk": [],
+    "renal_logic": [
+      {
+        "cutoff": 30,
+        "msg": "Higher doses may be required for effect; monitor electrolytes.",
+        "source": "BNF Renal"
+      }
+    ]
+  },
+  "spironolactone": {
+    "class": "Potassium-Sparing Diuretic",
+    "indication": "Heart Failure, Hyperaldosteronism",
+    "adr": "Hyperkalemia, gynecomastia.",
+    "adr_source": "BNF 84",
+    "hepatic_risk": false,
+    "contra_diseases": [
+      "Hyperkalemia",
+      "Anuria",
+      "CKD"
+    ],
+    "preg_cat": "C",
+    "lifestyle_risk": [
+      "Potassium Supplements"
+    ],
+    "renal_logic": [
+      {
+        "cutoff": 30,
+        "msg": "Avoid \u2014 risk of severe hyperkalemia.",
+        "source": "BNF Renal"
+      }
+    ]
+  },
+  "captopril": {
+    "class": "ACE Inhibitor",
+    "indication": "Hypertension, Heart Failure",
+    "adr": "Dry cough, hyperkalemia, angioedema.",
+    "adr_source": "BNF 84",
+    "hepatic_risk": false,
+    "contra_diseases": [
+      "Angioedema",
+      "Hyperkalemia",
+      "Bilateral Renal Artery Stenosis"
+    ],
+    "preg_cat": "X",
+    "lifestyle_risk": [
+      "Potassium Supplements"
+    ],
+    "renal_logic": [
+      {
+        "cutoff": 30,
+        "msg": "Reduce dose; monitor renal function and potassium.",
+        "source": "BNF Renal"
+      }
+    ]
+  },
+  "ramipril": {
+    "class": "ACE Inhibitor",
+    "indication": "Hypertension, Heart Failure, Post-MI",
+    "adr": "Dry cough, hyperkalemia, angioedema.",
+    "adr_source": "BNF 84",
+    "hepatic_risk": false,
+    "contra_diseases": [
+      "Angioedema",
+      "Hyperkalemia",
+      "Bilateral Renal Artery Stenosis"
+    ],
+    "preg_cat": "X",
+    "lifestyle_risk": [
+      "Potassium Supplements"
+    ],
+    "renal_logic": [
+      {
+        "cutoff": 30,
+        "msg": "Max 5mg daily; monitor renal function.",
+        "source": "BNF Renal"
+      }
+    ]
+  },
+  "losartan": {
+    "class": "ARB",
+    "indication": "Hypertension, Heart Failure, Diabetic Nephropathy",
+    "adr": "Hyperkalemia, dizziness, renal impairment.",
+    "adr_source": "BNF 84",
+    "hepatic_risk": true,
+    "contra_diseases": [
+      "Hyperkalemia",
+      "Bilateral Renal Artery Stenosis"
+    ],
+    "preg_cat": "X",
+    "lifestyle_risk": [
+      "Potassium Supplements"
+    ],
+    "renal_logic": [
+      {
+        "cutoff": 30,
+        "msg": "Use with caution; monitor potassium and renal function.",
+        "source": "BNF Renal"
+      }
+    ]
+  },
+  "losartan + hydrochlorothiazide": {
+    "class": "ARB + Thiazide Diuretic (Combination)",
+    "indication": "Hypertension",
+    "adr": "Hyperkalemia, hyponatremia, dizziness, renal impairment.",
+    "adr_source": "BNF 84",
+    "hepatic_risk": true,
+    "contra_diseases": [
+      "Hyperkalemia",
+      "Anuria",
+      "Bilateral Renal Artery Stenosis"
+    ],
+    "preg_cat": "X",
+    "lifestyle_risk": [
+      "Potassium Supplements"
+    ],
+    "renal_logic": [
+      {
+        "cutoff": 30,
+        "msg": "AVOID \u2014 thiazide component ineffective and ARB risk increases.",
+        "source": "BNF Renal"
+      }
+    ]
+  },
+  "clopidogrel": {
+    "class": "Antiplatelet (P2Y12 Inhibitor)",
+    "indication": "ACS, Stroke Prevention, PCI",
+    "adr": "Bleeding, rash, TTP (rare).",
+    "adr_source": "BNF 84",
+    "hepatic_risk": true,
+    "contra_diseases": [
+      "Active Bleeding",
+      "Peptic Ulcer"
+    ],
+    "preg_cat": "B",
+    "lifestyle_risk": [
+      "Alcohol"
+    ],
+    "renal_logic": []
+  },
+  "apixaban": {
+    "class": "Direct Oral Anticoagulant (Factor Xa Inhibitor)",
+    "indication": "AF, DVT/PE Prevention & Treatment",
+    "adr": "Bleeding, anemia.",
+    "adr_source": "BNF 84",
+    "hepatic_risk": true,
+    "contra_diseases": [
+      "Active Bleeding",
+      "Severe Hepatic Impairment"
+    ],
+    "preg_cat": "B",
+    "lifestyle_risk": [
+      "Alcohol"
+    ],
+    "renal_logic": [
+      {
+        "cutoff": 25,
+        "msg": "Reduce dose to 2.5mg BD if 2 of: age\u226580, weight\u226460kg, SCr\u22651.5 mg/dL.",
+        "source": "BNF 84"
+      }
+    ]
+  },
+  "enoxaparin": {
+    "class": "Low Molecular Weight Heparin",
+    "indication": "DVT/PE Treatment & Prevention, ACS",
+    "adr": "Bleeding, heparin-induced thrombocytopenia (HIT), injection site reactions.",
+    "adr_source": "BNF 84",
+    "hepatic_risk": false,
+    "contra_diseases": [
+      "Active Bleeding",
+      "HIT"
+    ],
+    "preg_cat": "B",
+    "lifestyle_risk": [],
+    "renal_logic": [
+      {
+        "cutoff": 30,
+        "msg": "Reduce dose by 50% (use 1mg/kg once daily for treatment). Monitor anti-Xa levels.",
+        "source": "BNF Renal"
+      }
+    ]
+  },
+  "heparin": {
+    "class": "Anticoagulant (Unfractionated Heparin)",
+    "indication": "DVT/PE, ACS, Anticoagulation",
+    "adr": "Bleeding, HIT, osteoporosis (long-term).",
+    "adr_source": "BNF 84",
+    "hepatic_risk": false,
+    "contra_diseases": [
+      "Active Bleeding",
+      "HIT",
+      "Hemophilia"
+    ],
+    "preg_cat": "C",
+    "lifestyle_risk": [],
+    "renal_logic": []
+  },
+  "isosorbide mononitrate": {
+    "class": "Nitrate",
+    "indication": "Angina Prophylaxis, Heart Failure",
+    "adr": "Headache, hypotension, tolerance.",
+    "adr_source": "BNF 84",
+    "hepatic_risk": false,
+    "contra_diseases": [
+      "Hypotension",
+      "Cardiogenic Shock"
+    ],
+    "preg_cat": "C",
+    "lifestyle_risk": [],
+    "renal_logic": []
+  },
+  "isosorbide dinitrate": {
+    "class": "Nitrate",
+    "indication": "Angina, Acute Heart Failure",
+    "adr": "Headache, hypotension, tolerance.",
+    "adr_source": "BNF 84",
+    "hepatic_risk": false,
+    "contra_diseases": [
+      "Hypotension",
+      "Cardiogenic Shock"
+    ],
+    "preg_cat": "C",
+    "lifestyle_risk": [],
+    "renal_logic": []
+  },
+  "nitroglycerin": {
+    "class": "Nitrate",
+    "indication": "Acute Angina, Hypertensive Emergency",
+    "adr": "Severe headache, reflex tachycardia, hypotension.",
+    "adr_source": "BNF 84",
+    "hepatic_risk": false,
+    "contra_diseases": [
+      "Hypotension",
+      "Cardiogenic Shock",
+      "Raised ICP"
+    ],
+    "preg_cat": "C",
+    "lifestyle_risk": [],
+    "renal_logic": []
+  },
+  "hydralazine": {
+    "class": "Vasodilator",
+    "indication": "Hypertension, Hypertensive Emergency in Pregnancy",
+    "adr": "Reflex tachycardia, lupus-like syndrome, headache.",
+    "adr_source": "BNF 84",
+    "hepatic_risk": false,
+    "contra_diseases": [
+      "Coronary Artery Disease",
+      "Tachycardia"
+    ],
+    "preg_cat": "C",
+    "lifestyle_risk": [],
+    "renal_logic": [
+      {
+        "cutoff": 30,
+        "msg": "Reduce dose; increase dosing interval.",
+        "source": "BNF Renal"
+      }
+    ]
+  },
+  "ivabradine": {
+    "class": "If Channel Inhibitor",
+    "indication": "Chronic Heart Failure, Stable Angina",
+    "adr": "Bradycardia, visual disturbances (phosphenes).",
+    "adr_source": "BNF 84",
+    "hepatic_risk": true,
+    "contra_diseases": [
+      "Bradycardia",
+      "Cardiogenic Shock",
+      "AF"
+    ],
+    "preg_cat": "X",
+    "lifestyle_risk": [
+      "Grapefruit Juice"
+    ],
+    "renal_logic": []
+  },
+  "norepinephrine": {
+    "class": "Vasopressor / Catecholamine",
+    "indication": "Septic Shock, Cardiogenic Shock",
+    "adr": "Hypertension, tissue necrosis (extravasation), arrhythmia.",
+    "adr_source": "DiPiro",
+    "hepatic_risk": false,
+    "contra_diseases": [
+      "Hypovolemia (uncorrected)"
+    ],
+    "preg_cat": "C",
+    "lifestyle_risk": [],
+    "renal_logic": []
+  },
+  "dobutamine": {
+    "class": "Inotrope / Catecholamine",
+    "indication": "Acute Heart Failure, Cardiogenic Shock",
+    "adr": "Tachycardia, arrhythmia, hypertension.",
+    "adr_source": "DiPiro",
+    "hepatic_risk": false,
+    "contra_diseases": [
+      "Hypertrophic Obstructive Cardiomyopathy"
+    ],
+    "preg_cat": "B",
+    "lifestyle_risk": [],
+    "renal_logic": []
+  },
+  "epinephrine": {
+    "class": "Catecholamine / Vasopressor",
+    "indication": "Anaphylaxis, Cardiac Arrest, Severe Asthma",
+    "adr": "Tachycardia, hypertension, arrhythmia, anxiety.",
+    "adr_source": "BNF 84",
+    "hepatic_risk": false,
+    "contra_diseases": [],
+    "preg_cat": "C",
+    "lifestyle_risk": [],
+    "renal_logic": []
+  },
+  "rosuvastatin": {
+    "class": "Statin (HMG-CoA Reductase Inhibitor)",
+    "indication": "Dyslipidemia, Cardiovascular Prevention",
+    "adr": "Myopathy, rhabdomyolysis (rare), elevated liver enzymes.",
+    "adr_source": "BNF 84",
+    "hepatic_risk": true,
+    "contra_diseases": [
+      "Active Liver Disease",
+      "Myopathy"
+    ],
+    "preg_cat": "X",
+    "lifestyle_risk": [
+      "Alcohol"
+    ],
+    "renal_logic": [
+      {
+        "cutoff": 30,
+        "msg": "Max 10mg daily.",
+        "source": "BNF Renal"
+      }
+    ]
+  },
+  "calcium gluconate": {
+    "class": "Electrolyte / Calcium Supplement",
+    "indication": "Hypocalcemia, Hyperkalemia (cardiac protection), Hypermag",
+    "adr": "Hypercalcemia, bradycardia (rapid IV), constipation.",
+    "adr_source": "BNF 84",
+    "hepatic_risk": false,
+    "contra_diseases": [
+      "Hypercalcemia",
+      "Digoxin Toxicity"
+    ],
+    "preg_cat": "C",
+    "lifestyle_risk": [],
+    "renal_logic": []
+  },
+  "potassium chloride": {
+    "class": "Electrolyte Supplement",
+    "indication": "Hypokalemia",
+    "adr": "Hyperkalemia, GI irritation (oral), cardiac arrest (rapid IV).",
+    "adr_source": "BNF 84",
+    "hepatic_risk": false,
+    "contra_diseases": [
+      "Hyperkalemia",
+      "CKD"
+    ],
+    "preg_cat": "A",
+    "lifestyle_risk": [],
+    "renal_logic": [
+      {
+        "cutoff": 30,
+        "msg": "Use with extreme caution \u2014 high risk of hyperkalemia. Monitor closely.",
+        "source": "BNF Renal"
+      }
+    ]
+  },
+  "lidocaine": {
+    "class": "Local Anesthetic / Antiarrhythmic",
+    "indication": "Ventricular Arrhythmia, Local Anesthesia",
+    "adr": "Seizures, CNS toxicity, bradycardia.",
+    "adr_source": "BNF 84",
+    "hepatic_risk": true,
+    "contra_diseases": [
+      "Heart Block",
+      "Severe Hepatic Failure"
+    ],
+    "preg_cat": "B",
+    "lifestyle_risk": [],
+    "renal_logic": []
+  },
+  "clindamycin": {
+    "class": "Lincosamide Antibiotic",
+    "indication": "Anaerobic Infections, Skin & Bone Infections",
+    "adr": "C. difficile colitis, diarrhea, rash.",
+    "adr_source": "BNF 84",
+    "hepatic_risk": true,
+    "contra_diseases": [
+      "C. difficile History"
+    ],
+    "preg_cat": "B",
+    "lifestyle_risk": [],
+    "renal_logic": []
+  },
+  "azithromycin": {
+    "class": "Macrolide Antibiotic",
+    "indication": "Respiratory / STI Infection",
+    "adr": "QT prolongation, GI upset, hepatotoxicity.",
+    "adr_source": "BNF 84",
+    "hepatic_risk": true,
+    "contra_diseases": [
+      "QT Prolongation"
+    ],
+    "preg_cat": "B",
+    "lifestyle_risk": [],
+    "renal_logic": []
+  },
+  "metronidazole": {
+    "class": "Nitroimidazole Antibiotic",
+    "indication": "Anaerobic Infection, H. pylori, C. difficile",
+    "adr": "Metallic taste, nausea, peripheral neuropathy (long-term).",
+    "adr_source": "BNF 84",
+    "hepatic_risk": true,
+    "contra_diseases": [],
+    "preg_cat": "B",
+    "lifestyle_risk": [
+      "Alcohol"
+    ],
+    "renal_logic": []
+  },
+  "doxycycline": {
+    "class": "Tetracycline Antibiotic",
+    "indication": "Respiratory / STI / Malaria Prophylaxis",
+    "adr": "Photosensitivity, esophageal irritation, tooth discoloration (children).",
+    "adr_source": "BNF 84",
+    "hepatic_risk": true,
+    "contra_diseases": [
+      "Pregnancy",
+      "Children under 8"
+    ],
+    "preg_cat": "D",
+    "lifestyle_risk": [
+      "Dairy Products"
+    ],
+    "renal_logic": []
+  },
+  "fluconazole": {
+    "class": "Azole Antifungal",
+    "indication": "Candidiasis, Cryptococcal Meningitis",
+    "adr": "Hepatotoxicity, QT prolongation, nausea.",
+    "adr_source": "BNF 84",
+    "hepatic_risk": true,
+    "contra_diseases": [
+      "QT Prolongation"
+    ],
+    "preg_cat": "C/D",
+    "lifestyle_risk": [],
+    "renal_logic": [
+      {
+        "cutoff": 50,
+        "msg": "Reduce dose by 50%.",
+        "source": "BNF Renal"
+      }
+    ]
+  },
+  "linezolid": {
+    "class": "Oxazolidinone Antibiotic",
+    "indication": "MRSA, VRE Infection",
+    "adr": "Myelosuppression, serotonin syndrome, peripheral neuropathy.",
+    "adr_source": "BNF 84",
+    "hepatic_risk": false,
+    "contra_diseases": [
+      "Uncontrolled Hypertension",
+      "Pheochromocytoma"
+    ],
+    "preg_cat": "C",
+    "lifestyle_risk": [
+      "Tyramine-Rich Foods"
+    ],
+    "renal_logic": []
+  },
+  "ceftriaxone": {
+    "class": "Cephalosporin (3rd Generation)",
+    "indication": "Severe Bacterial Infection, Meningitis, Sepsis",
+    "adr": "Hypersensitivity, biliary sludge, C. difficile.",
+    "adr_source": "BNF 84",
+    "hepatic_risk": false,
+    "contra_diseases": [
+      "Cephalosporin Allergy",
+      "Hyperbilirubinemia (Neonates)"
+    ],
+    "preg_cat": "B",
+    "lifestyle_risk": [],
+    "renal_logic": []
+  },
+  "amoxicillin + clavulanic acid": {
+    "class": "Penicillin + Beta-Lactamase Inhibitor (Combination)",
+    "indication": "Mixed Bacterial Infections, UTI, Pneumonia",
+    "adr": "Diarrhea, cholestatic jaundice, rash.",
+    "adr_source": "BNF 84",
+    "hepatic_risk": true,
+    "contra_diseases": [
+      "Penicillin Allergy",
+      "Severe Hepatic Impairment"
+    ],
+    "preg_cat": "B",
+    "lifestyle_risk": [],
+    "renal_logic": [
+      {
+        "cutoff": 30,
+        "msg": "Use amoxicillin/clavulanate 500/125mg BD (avoid 875/125mg formulation).",
+        "source": "BNF Renal"
+      }
+    ]
+  },
+  "rifampicin + isoniazid + pyrazinamide": {
+    "class": "Anti-TB Combination (FDC)",
+    "indication": "Tuberculosis (Intensive Phase)",
+    "adr": "Hepatotoxicity, peripheral neuropathy, red-orange discoloration of urine.",
+    "adr_source": "WHO TB Guidelines",
+    "hepatic_risk": true,
+    "contra_diseases": [
+      "Active Liver Disease",
+      "Acute Gout"
+    ],
+    "preg_cat": "C",
+    "lifestyle_risk": [
+      "Alcohol"
+    ],
+    "renal_logic": [
+      {
+        "cutoff": 30,
+        "msg": "Pyrazinamide: reduce dose or extend interval. Monitor closely.",
+        "source": "WHO Guidelines"
+      }
+    ]
+  },
+  "rifampicin": {
+    "class": "Rifamycin Antibiotic",
+    "indication": "Tuberculosis, MRSA decolonization",
+    "adr": "Hepatotoxicity, red-orange urine/secretions, drug interactions (CYP450 inducer).",
+    "adr_source": "BNF 84",
+    "hepatic_risk": true,
+    "contra_diseases": [
+      "Active Liver Disease",
+      "Jaundice"
+    ],
+    "preg_cat": "C",
+    "lifestyle_risk": [
+      "Alcohol"
+    ],
+    "renal_logic": []
+  },
+  "isoniazid": {
+    "class": "Anti-TB Agent",
+    "indication": "Tuberculosis",
+    "adr": "Peripheral neuropathy (B6 deficiency), hepatotoxicity.",
+    "adr_source": "BNF 84",
+    "hepatic_risk": true,
+    "contra_diseases": [
+      "Active Liver Disease"
+    ],
+    "preg_cat": "C",
+    "lifestyle_risk": [
+      "Alcohol"
+    ],
+    "renal_logic": []
+  },
+  "fosfomycin": {
+    "class": "Phosphonic Acid Antibiotic",
+    "indication": "Uncomplicated UTI",
+    "adr": "Diarrhea, nausea, headache.",
+    "adr_source": "BNF 84",
+    "hepatic_risk": false,
+    "contra_diseases": [],
+    "preg_cat": "B",
+    "lifestyle_risk": [],
+    "renal_logic": [
+      {
+        "cutoff": 10,
+        "msg": "Avoid use.",
+        "source": "BNF Renal"
+      }
+    ]
+  },
+  "fusidic acid": {
+    "class": "Steroidal Antibiotic",
+    "indication": "Staphylococcal Skin Infection, Osteomyelitis",
+    "adr": "Hepatotoxicity (systemic), GI upset.",
+    "adr_source": "BNF 84",
+    "hepatic_risk": true,
+    "contra_diseases": [],
+    "preg_cat": "C",
+    "lifestyle_risk": [],
+    "renal_logic": []
+  },
+  "nystatin": {
+    "class": "Polyene Antifungal",
+    "indication": "Oral / GI Candidiasis",
+    "adr": "Nausea, vomiting, diarrhea (oral).",
+    "adr_source": "BNF 84",
+    "hepatic_risk": false,
+    "contra_diseases": [],
+    "preg_cat": "C",
+    "lifestyle_risk": [],
+    "renal_logic": []
+  },
+  "sodium valproate": {
+    "class": "Antiepileptic / Mood Stabilizer",
+    "indication": "Epilepsy, Bipolar Disorder, Migraine Prophylaxis",
+    "adr": "Hepatotoxicity, pancreatitis, teratogenicity (NTDs), weight gain, tremor.",
+    "adr_source": "BNF 84",
+    "hepatic_risk": true,
+    "contra_diseases": [
+      "Active Liver Disease",
+      "Mitochondrial Disease"
+    ],
+    "preg_cat": "X",
+    "lifestyle_risk": [
+      "Alcohol"
+    ],
+    "renal_logic": []
+  },
+  "diazepam": {
+    "class": "Benzodiazepine",
+    "indication": "Anxiety, Seizures, Muscle Spasm, Alcohol Withdrawal",
+    "adr": "Sedation, respiratory depression, dependence.",
+    "adr_source": "BNF 84",
+    "hepatic_risk": true,
+    "contra_diseases": [
+      "Respiratory Depression",
+      "Myasthenia Gravis",
+      "Sleep Apnea"
+    ],
+    "preg_cat": "D",
+    "lifestyle_risk": [
+      "Alcohol"
+    ],
+    "renal_logic": []
+  },
+  "clonazepam": {
+    "class": "Benzodiazepine",
+    "indication": "Epilepsy, Panic Disorder",
+    "adr": "Sedation, dependence, cognitive impairment.",
+    "adr_source": "BNF 84",
+    "hepatic_risk": true,
+    "contra_diseases": [
+      "Respiratory Depression",
+      "Severe Hepatic Failure"
+    ],
+    "preg_cat": "D",
+    "lifestyle_risk": [
+      "Alcohol"
+    ],
+    "renal_logic": []
+  },
+  "midazolam": {
+    "class": "Benzodiazepine (Short-acting)",
+    "indication": "Sedation, Pre-medication, Status Epilepticus",
+    "adr": "Respiratory depression, hypotension, amnesia.",
+    "adr_source": "BNF 84",
+    "hepatic_risk": true,
+    "contra_diseases": [
+      "Respiratory Depression",
+      "Myasthenia Gravis"
+    ],
+    "preg_cat": "D",
+    "lifestyle_risk": [
+      "Alcohol"
+    ],
+    "renal_logic": []
+  },
+  "haloperidol": {
+    "class": "Typical Antipsychotic",
+    "indication": "Schizophrenia, Acute Psychosis, Delirium",
+    "adr": "EPS, tardive dyskinesia, QT prolongation, NMS.",
+    "adr_source": "BNF 84",
+    "hepatic_risk": true,
+    "contra_diseases": [
+      "QT Prolongation",
+      "Parkinson's Disease"
+    ],
+    "preg_cat": "C",
+    "lifestyle_risk": [
+      "Alcohol"
+    ],
+    "renal_logic": []
+  },
+  "sertraline": {
+    "class": "SSRI Antidepressant",
+    "indication": "Depression, Anxiety, OCD, PTSD",
+    "adr": "GI upset, insomnia, sexual dysfunction, serotonin syndrome (overdose/interaction).",
+    "adr_source": "BNF 84",
+    "hepatic_risk": true,
+    "contra_diseases": [
+      "Mania"
+    ],
+    "preg_cat": "C",
+    "lifestyle_risk": [
+      "Alcohol"
+    ],
+    "renal_logic": []
+  },
+  "pregabalin": {
+    "class": "Gabapentinoid",
+    "indication": "Neuropathic Pain, Epilepsy, Anxiety",
+    "adr": "Dizziness, somnolence, weight gain, dependence.",
+    "adr_source": "BNF 84",
+    "hepatic_risk": false,
+    "contra_diseases": [],
+    "preg_cat": "C",
+    "lifestyle_risk": [
+      "Alcohol"
+    ],
+    "renal_logic": [
+      {
+        "cutoff": 60,
+        "msg": "Reduce dose. Max 300mg/day.",
+        "source": "BNF Renal"
+      },
+      {
+        "cutoff": 30,
+        "msg": "Max 150mg/day.",
+        "source": "BNF Renal"
+      },
+      {
+        "cutoff": 15,
+        "msg": "Max 75mg/day.",
+        "source": "BNF Renal"
+      }
+    ]
+  },
+  "tramadol": {
+    "class": "Opioid Analgesic (Weak)",
+    "indication": "Moderate to Severe Pain",
+    "adr": "Nausea, seizures, serotonin syndrome, dependence.",
+    "adr_source": "BNF 84",
+    "hepatic_risk": true,
+    "contra_diseases": [
+      "Epilepsy",
+      "Respiratory Depression"
+    ],
+    "preg_cat": "C",
+    "lifestyle_risk": [
+      "Alcohol"
+    ],
+    "renal_logic": [
+      {
+        "cutoff": 30,
+        "msg": "Max 100mg/day; extend dosing interval to 12-hourly.",
+        "source": "BNF Renal"
+      }
+    ]
+  },
+  "dapagliflozin": {
+    "class": "SGLT-2 Inhibitor",
+    "indication": "Type 2 Diabetes, Heart Failure, CKD",
+    "adr": "UTI, genital mycotic infection, DKA (euglycemic).",
+    "adr_source": "BNF 84",
+    "hepatic_risk": false,
+    "contra_diseases": [
+      "T1DM",
+      "DKA",
+      "Recurrent UTI"
+    ],
+    "preg_cat": "C",
+    "lifestyle_risk": [],
+    "renal_logic": [
+      {
+        "cutoff": 25,
+        "msg": "AVOID for glycemic control; may continue for HF/CKD indications with caution.",
+        "source": "BNF Renal"
+      }
+    ]
+  },
+  "regular insulin": {
+    "class": "Short-Acting Insulin",
+    "indication": "Diabetes (T1DM & T2DM), Hyperkalemia, DKA",
+    "adr": "Hypoglycemia, hypokalemia, lipodystrophy.",
+    "adr_source": "DiPiro",
+    "hepatic_risk": false,
+    "contra_diseases": [
+      "Hypoglycemia"
+    ],
+    "preg_cat": "B",
+    "lifestyle_risk": [
+      "Alcohol"
+    ],
+    "renal_logic": [
+      {
+        "cutoff": 30,
+        "msg": "Reduce dose \u2014 insulin clearance reduced; risk of hypoglycemia.",
+        "source": "Katzung"
+      }
+    ]
+  },
+  "prednisolone": {
+    "class": "Corticosteroid",
+    "indication": "Inflammation, Autoimmune Disease, Asthma",
+    "adr": "Hyperglycemia, osteoporosis, immunosuppression, Cushingoid features.",
+    "adr_source": "BNF 84",
+    "hepatic_risk": false,
+    "contra_diseases": [
+      "Active Infection",
+      "Systemic Fungal Infection"
+    ],
+    "preg_cat": "C",
+    "lifestyle_risk": [
+      "Alcohol"
+    ],
+    "renal_logic": []
+  },
+  "dexamethasone": {
+    "class": "Corticosteroid (Potent)",
+    "indication": "Severe Inflammation, Cerebral Edema, Septic Shock",
+    "adr": "Hyperglycemia, immunosuppression, adrenal suppression.",
+    "adr_source": "BNF 84",
+    "hepatic_risk": false,
+    "contra_diseases": [
+      "Active Infection",
+      "Systemic Fungal Infection"
+    ],
+    "preg_cat": "C",
+    "lifestyle_risk": [],
+    "renal_logic": []
+  },
+  "vitamin d3": {
+    "class": "Vitamin D Supplement",
+    "indication": "Vitamin D Deficiency, Osteoporosis",
+    "adr": "Hypercalcemia (overdose), hypercalciuria.",
+    "adr_source": "BNF 84",
+    "hepatic_risk": false,
+    "contra_diseases": [
+      "Hypercalcemia",
+      "Hypercalciuria"
+    ],
+    "preg_cat": "A/C",
+    "lifestyle_risk": [],
+    "renal_logic": [
+      {
+        "cutoff": 30,
+        "msg": "Avoid high-dose supplementation; use active forms (calcitriol).",
+        "source": "BNF Renal"
+      }
+    ]
+  },
+  "ondansetron": {
+    "class": "5-HT3 Antagonist (Antiemetic)",
+    "indication": "Nausea & Vomiting (Chemo, Post-op)",
+    "adr": "Headache, constipation, QT prolongation.",
+    "adr_source": "BNF 84",
+    "hepatic_risk": true,
+    "contra_diseases": [
+      "QT Prolongation",
+      "Congenital Long QT"
+    ],
+    "preg_cat": "B",
+    "lifestyle_risk": [],
+    "renal_logic": []
+  },
+  "metoclopramide": {
+    "class": "Prokinetic / Antiemetic",
+    "indication": "Nausea, Gastric Stasis, GERD",
+    "adr": "EPS, tardive dyskinesia (long-term), drowsiness.",
+    "adr_source": "BNF 84",
+    "hepatic_risk": false,
+    "contra_diseases": [
+      "Parkinson's Disease",
+      "GI Obstruction"
+    ],
+    "preg_cat": "B",
+    "lifestyle_risk": [],
+    "renal_logic": [
+      {
+        "cutoff": 40,
+        "msg": "Reduce dose by 50%.",
+        "source": "BNF Renal"
+      }
+    ]
+  },
+  "lactulose": {
+    "class": "Osmotic Laxative",
+    "indication": "Constipation, Hepatic Encephalopathy",
+    "adr": "Flatulence, bloating, diarrhea (excessive dose).",
+    "adr_source": "BNF 84",
+    "hepatic_risk": false,
+    "contra_diseases": [
+      "Galactosemia",
+      "GI Obstruction"
+    ],
+    "preg_cat": "B",
+    "lifestyle_risk": [],
+    "renal_logic": []
+  },
+  "bacillus clausii": {
+    "class": "Probiotic",
+    "indication": "Intestinal Dysbiosis, Antibiotic-Associated Diarrhea",
+    "adr": "Mild GI upset (rare).",
+    "adr_source": "BNF / Manufacturer",
+    "hepatic_risk": false,
+    "contra_diseases": [
+      "Severe Immunosuppression"
+    ],
+    "preg_cat": "B",
+    "lifestyle_risk": [],
+    "renal_logic": []
+  },
+  "ketorolac": {
+    "class": "NSAID (Parenteral/Oral)",
+    "indication": "Short-Term Moderate-to-Severe Pain",
+    "adr": "GI bleeding, renal impairment, platelet inhibition. (Max 5 days use)",
+    "adr_source": "BNF 84",
+    "hepatic_risk": false,
+    "contra_diseases": [
+      "Peptic Ulcer",
+      "CKD",
+      "Active Bleeding",
+      "Heart Failure"
+    ],
+    "preg_cat": "C/D",
+    "lifestyle_risk": [
+      "Alcohol"
+    ],
+    "renal_logic": [
+      {
+        "cutoff": 50,
+        "msg": "Reduce dose; max 15mg QDS. Monitor renal function.",
+        "source": "BNF Renal"
+      },
+      {
+        "cutoff": 30,
+        "msg": "AVOID.",
+        "source": "BNF Renal"
+      }
+    ]
+  },
+  "celecoxib": {
+    "class": "COX-2 Inhibitor (NSAID)",
+    "indication": "Arthritis, Acute Pain",
+    "adr": "Cardiovascular risk, GI upset, hypertension.",
+    "adr_source": "BNF 84",
+    "hepatic_risk": true,
+    "contra_diseases": [
+      "Peptic Ulcer",
+      "Heart Failure",
+      "Ischemic Heart Disease",
+      "CKD"
+    ],
+    "preg_cat": "C/D",
+    "lifestyle_risk": [
+      "Alcohol"
+    ],
+    "renal_logic": [
+      {
+        "cutoff": 30,
+        "msg": "Avoid use.",
+        "source": "BNF Renal"
+      }
+    ]
+  },
+  "drotaverine": {
+    "class": "Antispasmodic",
+    "indication": "GI & Biliary Colic, Uterine Spasm",
+    "adr": "Dizziness, nausea, hypotension.",
+    "adr_source": "Manufacturer data",
+    "hepatic_risk": false,
+    "contra_diseases": [
+      "Severe Hepatic/Renal Impairment",
+      "Cardiac Failure"
+    ],
+    "preg_cat": "C",
+    "lifestyle_risk": [],
+    "renal_logic": []
+  },
+  "tocilizumab": {
+    "class": "IL-6 Receptor Antagonist (Biologic)",
+    "indication": "RA, Cytokine Release Syndrome (COVID-19, CAR-T)",
+    "adr": "Serious infections, hepatotoxicity, bowel perforation, neutropenia.",
+    "adr_source": "BNF 84",
+    "hepatic_risk": true,
+    "contra_diseases": [
+      "Active Infection",
+      "Severe Hepatic Impairment"
+    ],
+    "preg_cat": "C",
+    "lifestyle_risk": [],
+    "renal_logic": []
+  },
+  "natural micronised progesterone": {
+    "class": "Progestogen",
+    "indication": "Luteal Phase Support, Threatened Miscarriage, HRT",
+    "adr": "Drowsiness, dizziness, vaginal discharge (vaginal route).",
+    "adr_source": "BNF 84",
+    "hepatic_risk": false,
+    "contra_diseases": [
+      "Undiagnosed Vaginal Bleeding",
+      "Breast Cancer",
+      "Thromboembolic Disorders"
+    ],
+    "preg_cat": "B",
+    "lifestyle_risk": [],
+    "renal_logic": []
+  },
+  "atracurium": {
+    "class": "Non-Depolarising Neuromuscular Blocker",
+    "indication": "ICU Sedation, Surgical Muscle Relaxation",
+    "adr": "Histamine release, bronchospasm, prolonged block.",
+    "adr_source": "BNF 84",
+    "hepatic_risk": false,
+    "contra_diseases": [
+      "Myasthenia Gravis"
+    ],
+    "preg_cat": "C",
+    "lifestyle_risk": [],
+    "renal_logic": []
+  },
+  "pyridoxine": {
+    "class": "Vitamin B6 Supplement",
+    "indication": "B6 Deficiency, INH-Induced Neuropathy Prophylaxis, Nausea",
+    "adr": "Peripheral neuropathy (high chronic doses >200mg/day).",
+    "adr_source": "BNF 84",
+    "hepatic_risk": false,
+    "contra_diseases": [],
+    "preg_cat": "A",
+    "lifestyle_risk": [],
+    "renal_logic": []
+  },
+  "methylcobalamin": {
+    "class": "Vitamin B12 Supplement",
+    "indication": "B12 Deficiency, Peripheral Neuropathy",
+    "adr": "Generally well tolerated; acne (rare).",
+    "adr_source": "BNF 84",
+    "hepatic_risk": false,
+    "contra_diseases": [],
+    "preg_cat": "A",
+    "lifestyle_risk": [],
+    "renal_logic": []
+  },
+  "ferrous sulfate": {
+    "class": "Iron Supplement",
+    "indication": "Iron Deficiency Anemia",
+    "adr": "Constipation, nausea, dark stools, GI irritation.",
+    "adr_source": "BNF 84",
+    "hepatic_risk": false,
+    "contra_diseases": [
+      "Hemochromatosis",
+      "Hemolytic Anemia"
+    ],
+    "preg_cat": "A",
+    "lifestyle_risk": [],
+    "renal_logic": [
+      {
+        "cutoff": 30,
+        "msg": "Use with caution \u2014 accumulation risk; monitor iron stores.",
+        "source": "BNF Renal"
+      }
+    ]
+  },
+  "folic acid": {
+    "class": "Vitamin B9 Supplement",
+    "indication": "Folate Deficiency, Neural Tube Defect Prevention",
+    "adr": "Rarely GI upset; may mask B12 deficiency.",
+    "adr_source": "BNF 84",
+    "hepatic_risk": false,
+    "contra_diseases": [
+      "Undiagnosed Megaloblastic Anemia"
+    ],
+    "preg_cat": "A",
+    "lifestyle_risk": [],
+    "renal_logic": []
+  },
+  "human albumin": {
+    "class": "Plasma Volume Expander",
+    "indication": "Hypoalbuminemia, Cirrhotic Ascites, Septic Shock",
+    "adr": "Fluid overload, pulmonary edema, electrolyte disturbances.",
+    "adr_source": "BNF 84",
+    "hepatic_risk": false,
+    "contra_diseases": [
+      "Pulmonary Edema",
+      "Severe Anemia"
+    ],
+    "preg_cat": "C",
+    "lifestyle_risk": [],
+    "renal_logic": []
+  }
+}

@@ -1,0 +1,350 @@
+{
+  "Ceftriaxone 1g Vial": {
+    "strength_mg": 1000,
+    "diluent": "Water for Injection or 1% Lidocaine (IM only)",
+    "reconst_vol_ml": 9.6,
+    "final_vol_ml": 10.0,
+    "final_conc": 100.0,
+    "compatible_fluids": [
+      "NS",
+      "D5W",
+      "LR"
+    ],
+    "rate_iv": "Slow IV Push over 2-4 mins OR Infusion over 30 mins",
+    "stability": "Use immediately; stable 24h refrigerated"
+  },
+  "Vancomycin 500mg Vial": {
+    "strength_mg": 500,
+    "diluent": "Water for Injection",
+    "reconst_vol_ml": 10.0,
+    "final_vol_ml": 10.0,
+    "final_conc": 50.0,
+    "compatible_fluids": [
+      "NS",
+      "D5W"
+    ],
+    "rate_iv": "Intermittent Infusion over at least 60 mins (Red Man Syndrome risk if faster)",
+    "stability": "Reconstituted solution stable 14 days refrigerated"
+  },
+  "Meropenem 1g Vial": {
+    "strength_mg": 1000,
+    "diluent": "Water for Injection",
+    "reconst_vol_ml": 20.0,
+    "final_vol_ml": 20.0,
+    "final_conc": 50.0,
+    "compatible_fluids": [
+      "NS",
+      "D5W"
+    ],
+    "rate_iv": "IV Bolus over 3-5 mins OR Infusion over 15-30 mins",
+    "stability": "Use within 2-3 hours at room temperature"
+  },
+  "Hydrocortisone 100mg Vial": {
+    "strength_mg": 100,
+    "diluent": "Water for Injection",
+    "reconst_vol_ml": 2.0,
+    "final_vol_ml": 2.0,
+    "final_conc": 50.0,
+    "compatible_fluids": [
+      "NS",
+      "D5W"
+    ],
+    "rate_iv": "Slow IV Push over 30 seconds OR IV Infusion",
+    "stability": "Use within 3 days if protected from light"
+  },
+  "Pantoprazole 40mg Vial": {
+    "strength_mg": 40,
+    "diluent": "0.9% Sodium Chloride",
+    "reconst_vol_ml": 10.0,
+    "final_vol_ml": 10.0,
+    "final_conc": 4.0,
+    "compatible_fluids": [
+      "NS",
+      "D5W"
+    ],
+    "rate_iv": "IV Push over 2 mins OR Infusion over 15 mins",
+    "stability": "Use within 12 hours"
+  },
+  "Piperacillin/Tazobactam 4.5g": {
+    "strength_mg": 4500,
+    "diluent": "NS or Water for Injection",
+    "reconst_vol_ml": 20.0,
+    "final_vol_ml": 23.0,
+    "final_conc": 200.0,
+    "compatible_fluids": [
+      "NS",
+      "D5W"
+    ],
+    "rate_iv": "Infusion over 30 mins (Extended infusion 3-4h preferred for severe infection)",
+    "stability": "Use within 24h at room temperature"
+  },
+  "Furosemide 20mg/2mL Ampoule": {
+    "strength_mg": 20,
+    "diluent": "No reconstitution needed (ready to use)",
+    "reconst_vol_ml": 2.0,
+    "final_vol_ml": 2.0,
+    "final_conc": 10.0,
+    "compatible_fluids": [
+      "NS",
+      "D5W",
+      "LR"
+    ],
+    "rate_iv": "Slow IV Push over 1-2 mins (max rate 4mg/min to avoid ototoxicity)",
+    "stability": "Use immediately; protect from light"
+  },
+  "Ondansetron 4mg/2mL Ampoule": {
+    "strength_mg": 4,
+    "diluent": "No reconstitution needed (ready to use)",
+    "reconst_vol_ml": 2.0,
+    "final_vol_ml": 2.0,
+    "final_conc": 2.0,
+    "compatible_fluids": [
+      "NS",
+      "D5W"
+    ],
+    "rate_iv": "Slow IV Push over 2-5 mins OR dilute in 50mL NS and infuse over 15 mins",
+    "stability": "Use immediately once diluted"
+  },
+  "Metoclopramide 10mg/2mL Ampoule": {
+    "strength_mg": 10,
+    "diluent": "No reconstitution needed (ready to use)",
+    "reconst_vol_ml": 2.0,
+    "final_vol_ml": 2.0,
+    "final_conc": 5.0,
+    "compatible_fluids": [
+      "NS",
+      "D5W"
+    ],
+    "rate_iv": "Slow IV Push over 3-5 mins (rapid injection causes anxiety/EPS)",
+    "stability": "Use immediately"
+  },
+  "Metronidazole 500mg/100mL Infusion": {
+    "strength_mg": 500,
+    "diluent": "Pre-mixed (ready to infuse)",
+    "reconst_vol_ml": 100.0,
+    "final_vol_ml": 100.0,
+    "final_conc": 5.0,
+    "compatible_fluids": [
+      "NS",
+      "D5W"
+    ],
+    "rate_iv": "Infusion over 20-30 mins",
+    "stability": "Use within 24h at room temperature; protect from light"
+  },
+  "Dexamethasone 4mg/mL Ampoule": {
+    "strength_mg": 4,
+    "diluent": "No reconstitution needed; dilute in NS/D5W for infusion",
+    "reconst_vol_ml": 1.0,
+    "final_vol_ml": 1.0,
+    "final_conc": 4.0,
+    "compatible_fluids": [
+      "NS",
+      "D5W"
+    ],
+    "rate_iv": "Slow IV Push over 2-3 mins OR dilute and infuse over 15-30 mins",
+    "stability": "Use within 24h once diluted"
+  },
+  "Omeprazole 40mg Vial": {
+    "strength_mg": 40,
+    "diluent": "0.9% Sodium Chloride (reconstitute with 5mL, then dilute to 100mL)",
+    "reconst_vol_ml": 5.0,
+    "final_vol_ml": 100.0,
+    "final_conc": 0.4,
+    "compatible_fluids": [
+      "NS"
+    ],
+    "rate_iv": "Infusion over 20-30 mins",
+    "stability": "Use within 4 hours of preparation"
+  },
+  "Calcium Gluconate 10% (10mL Ampoule)": {
+    "strength_mg": 1000,
+    "diluent": "Dilute in 100mL NS or D5W",
+    "reconst_vol_ml": 10.0,
+    "final_vol_ml": 100.0,
+    "final_conc": 10.0,
+    "compatible_fluids": [
+      "NS",
+      "D5W"
+    ],
+    "rate_iv": "Infusion over 10-20 mins (NEVER rapid IV \u2014 risk of cardiac arrest)",
+    "stability": "Use immediately once diluted"
+  },
+  "Potassium Chloride 1.5g in 10mL": {
+    "strength_mg": 1500,
+    "diluent": "MUST dilute before use \u2014 NEVER give undiluted IV",
+    "reconst_vol_ml": 10.0,
+    "final_vol_ml": 250.0,
+    "final_conc": 6.0,
+    "compatible_fluids": [
+      "NS",
+      "D5W"
+    ],
+    "rate_iv": "Max 10 mEq/hour peripheral; max 20 mEq/hour via central line with monitoring",
+    "stability": "Use within 24h; do NOT add to hanging bags"
+  },
+  "Regular Insulin (IV Infusion)": {
+    "strength_mg": 100,
+    "diluent": "0.9% Sodium Chloride \u2014 add 100 units to 100mL NS (1 unit/mL)",
+    "reconst_vol_ml": 100.0,
+    "final_vol_ml": 100.0,
+    "final_conc": 1.0,
+    "compatible_fluids": [
+      "NS"
+    ],
+    "rate_iv": "Continuous infusion \u2014 titrate to blood glucose (typically 0.1-0.5 units/kg/hr)",
+    "stability": "Use within 24h; flush IV line before use (insulin adsorbs to plastic)"
+  },
+  "Heparin 5000 IU/mL": {
+    "strength_mg": 5000,
+    "diluent": "Add 25,000 units to 250mL NS (100 units/mL) for infusion",
+    "reconst_vol_ml": 250.0,
+    "final_vol_ml": 250.0,
+    "final_conc": 100.0,
+    "compatible_fluids": [
+      "NS",
+      "D5W"
+    ],
+    "rate_iv": "Continuous IV infusion \u2014 dose by weight-based protocol; monitor aPTT",
+    "stability": "Use within 24h"
+  },
+  "Enoxaparin 60mg/0.6mL Syringe": {
+    "strength_mg": 60,
+    "diluent": "Pre-filled syringe \u2014 SC injection only (NOT IV bolus)",
+    "reconst_vol_ml": 0.6,
+    "final_vol_ml": 0.6,
+    "final_conc": 100.0,
+    "compatible_fluids": [
+      "SC only"
+    ],
+    "rate_iv": "Subcutaneous injection \u2014 abdomen preferred; rotate sites",
+    "stability": "Store at room temperature; do NOT freeze"
+  },
+  "Norepinephrine 4mg/4mL Ampoule": {
+    "strength_mg": 4,
+    "diluent": "Add 4mg to 46mL D5W or NS (concentration 80 mcg/mL)",
+    "reconst_vol_ml": 4.0,
+    "final_vol_ml": 50.0,
+    "final_conc": 0.08,
+    "compatible_fluids": [
+      "D5W",
+      "NS"
+    ],
+    "rate_iv": "Continuous infusion via CENTRAL LINE only \u2014 titrate to MAP >65mmHg",
+    "stability": "Use within 24h; check colour \u2014 discard if brown"
+  },
+  "Dobutamine 250mg/20mL Vial": {
+    "strength_mg": 250,
+    "diluent": "Add 250mg to 230mL D5W (concentration 1mg/mL)",
+    "reconst_vol_ml": 20.0,
+    "final_vol_ml": 250.0,
+    "final_conc": 1.0,
+    "compatible_fluids": [
+      "D5W",
+      "NS"
+    ],
+    "rate_iv": "Continuous infusion \u2014 start 2.5 mcg/kg/min; titrate to response",
+    "stability": "Use within 24h at room temperature"
+  },
+  "Amiodarone 150mg/3mL Ampoule": {
+    "strength_mg": 150,
+    "diluent": "Dilute in D5W ONLY (NOT NS \u2014 precipitates)",
+    "reconst_vol_ml": 3.0,
+    "final_vol_ml": 100.0,
+    "final_conc": 1.5,
+    "compatible_fluids": [
+      "D5W"
+    ],
+    "rate_iv": "Loading: 150mg over 10 mins; then 1mg/min for 6h; then 0.5mg/min \u2014 use CENTRAL LINE for prolonged infusion",
+    "stability": "Use within 24h; protect from light; avoid PVC containers"
+  },
+  "Hydralazine 20mg/mL Ampoule": {
+    "strength_mg": 20,
+    "diluent": "Dilute with NS or Water for Injection",
+    "reconst_vol_ml": 1.0,
+    "final_vol_ml": 10.0,
+    "final_conc": 2.0,
+    "compatible_fluids": [
+      "NS"
+    ],
+    "rate_iv": "Slow IV Push over 5 mins (Hypertensive emergency); monitor BP every 5 mins",
+    "stability": "Use immediately once diluted"
+  },
+  "Midazolam 5mg/mL Ampoule": {
+    "strength_mg": 5,
+    "diluent": "Dilute to 0.5-1mg/mL with NS or D5W",
+    "reconst_vol_ml": 1.0,
+    "final_vol_ml": 10.0,
+    "final_conc": 0.5,
+    "compatible_fluids": [
+      "NS",
+      "D5W"
+    ],
+    "rate_iv": "Slow IV Push over 2-3 mins for sedation; continuous infusion for ICU",
+    "stability": "Use within 24h"
+  },
+  "Atracurium 50mg/5mL Ampoule": {
+    "strength_mg": 50,
+    "diluent": "Dilute in NS or D5W (0.5mg/mL for infusion)",
+    "reconst_vol_ml": 5.0,
+    "final_vol_ml": 100.0,
+    "final_conc": 0.5,
+    "compatible_fluids": [
+      "NS",
+      "D5W"
+    ],
+    "rate_iv": "IV Bolus over 10-15 seconds for intubation; continuous infusion in ICU",
+    "stability": "Use within 24h if refrigerated; use within 8h at room temperature"
+  },
+  "Metoprolol 5mg/5mL Ampoule": {
+    "strength_mg": 5,
+    "diluent": "No reconstitution needed (ready to use)",
+    "reconst_vol_ml": 5.0,
+    "final_vol_ml": 5.0,
+    "final_conc": 1.0,
+    "compatible_fluids": [
+      "NS",
+      "D5W"
+    ],
+    "rate_iv": "Slow IV Push 5mg over 5 mins; max 3 doses at 5-min intervals",
+    "stability": "Use immediately"
+  },
+  "Human Albumin 20% (100mL Bottle)": {
+    "strength_mg": 20000,
+    "diluent": "Ready to use (no dilution required)",
+    "reconst_vol_ml": 100.0,
+    "final_vol_ml": 100.0,
+    "final_conc": 200.0,
+    "compatible_fluids": [
+      "NS",
+      "D5W"
+    ],
+    "rate_iv": "Infuse over 60-120 mins; rate adjusted based on clinical response",
+    "stability": "Use within 3 hours of opening"
+  },
+  "Magnesium Sulfate 50% (10mL Ampoule)": {
+    "strength_mg": 5000,
+    "diluent": "MUST dilute \u2014 add to 250mL NS or D5W",
+    "reconst_vol_ml": 10.0,
+    "final_vol_ml": 260.0,
+    "final_conc": 19.2,
+    "compatible_fluids": [
+      "NS",
+      "D5W"
+    ],
+    "rate_iv": "Loading: 4g over 20 mins (eclampsia); Maintenance: 1-2g/hour \u2014 monitor reflexes and respiratory rate",
+    "stability": "Use within 24h"
+  },
+  "Labetalol 100mg/20mL Ampoule": {
+    "strength_mg": 100,
+    "diluent": "Add 200mg to 160mL NS or D5W (1mg/mL)",
+    "reconst_vol_ml": 20.0,
+    "final_vol_ml": 200.0,
+    "final_conc": 1.0,
+    "compatible_fluids": [
+      "NS",
+      "D5W"
+    ],
+    "rate_iv": "Bolus: 20mg slow IV; or infusion 0.5-2mg/min for hypertensive crisis",
+    "stability": "Use within 24h"
+  }
+}
