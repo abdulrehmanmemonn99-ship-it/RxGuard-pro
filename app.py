@@ -4,6 +4,7 @@ import pytesseract
 import math
 import json
 import os
+from datetime import datetime
 
 # --- 1. APP CONFIGURATION ---
 st.set_page_config(
@@ -62,6 +63,18 @@ st.markdown("""
     .rxcard-body   { font-size: 0.9rem; }
     .rxcard-meta   { font-size: 0.8rem; margin-top: 6px; opacity: 0.85; }
 
+    /* ── History Card ── */
+    .hxcard {
+        padding: 14px 18px;
+        border-radius: 8px;
+        margin-bottom: 12px;
+        border-left: 5px solid #2980b9;
+        background-color: #f4f8fb;
+        color: #0a2540;
+    }
+    .hxcard-header { font-weight: 700; font-size: 0.95rem; margin-bottom: 6px; }
+    .hxcard-body   { font-size: 0.85rem; line-height: 1.7; }
+
     /* ── Score Badge ── */
     .score-badge {
         display: inline-block;
@@ -105,7 +118,11 @@ for key, value in _raw_interactions.items():
 
 parenteral_db = _load("parenteral.json")
 
-# --- 3. HELPERS ---
+# --- 3. SESSION STATE: HISTORY ---
+if "analysis_history" not in st.session_state:
+    st.session_state.analysis_history = []
+
+# --- 4. HELPERS ---
 def calculate_crcl(age, weight_kg, gender, scr):
     if scr <= 0: return None
     factor = 0.85 if gender == "Female" else 1.0
@@ -122,7 +139,18 @@ def card(style, title, body, meta=""):
     </div>
     """, unsafe_allow_html=True)
 
-# --- 4. SIDEBAR ---
+def save_to_history(patient_info, drugs_found, score, notes):
+    record = {
+        "timestamp": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+        "patient": patient_info,
+        "drugs": drugs_found,
+        "score": score,
+        "alerts": notes,
+        "alert_count": len(notes)
+    }
+    st.session_state.analysis_history.insert(0, record)
+
+# --- 5. SIDEBAR ---
 with st.sidebar:
     st.title("⚕️ RxGuard Ultimate")
     st.markdown("### 1. Patient Data")
@@ -168,8 +196,8 @@ with st.sidebar:
     st.divider()
     st.caption(f"Calculated Weight: {round(weight_kg, 1)} kg | CrCl: {crcl_calc if crcl_calc else 'N/A'} mL/min")
 
-# --- 5. MAIN TABS ---
-tab1, tab2, tab3 = st.tabs(["🏥 Clinical Analysis", "💉 Parenteral (IV) Dilution", "🤖 AI Consult"])
+# --- 6. MAIN TABS ---
+tab1, tab2, tab3 = st.tabs(["🏥 Clinical Analysis", "💉 Parenteral (IV) Dilution", "📋 Analysis History"])
 
 # ==========================================
 # TAB 1: CLINICAL ANALYSIS
@@ -208,8 +236,9 @@ with tab1:
     with col_out:
         if run_analysis and text_input:
 
-            # Patient context card
             card("info", "👤 Patient Context",
+                f"<b>Age:</b> {age} yrs &nbsp;|&nbsp; <b>Gender:</b> {gender} &nbsp;|&nbsp; "
+                f"<b>Weight:</b> {round(weight_kg,1)} kg<br>"
                 f"<b>Renal:</b> {renal_function if renal_function else 'N/A'} mL/min ({renal_source}) &nbsp;|&nbsp; "
                 f"<b>ALT:</b> {alt} U/L &nbsp;|&nbsp; <b>INR:</b> {inr} &nbsp;|&nbsp; <b>Platelets:</b> {platelets}")
 
@@ -381,6 +410,21 @@ with tab1:
                 with st.expander("📋 Pharmacist Intervention Note"):
                     st.code("\n".join(intervention_notes) if intervention_notes else "No significant issues found.")
 
+                # ── SAVE TO HISTORY ──────────────────────────────────
+                patient_info = {
+                    "age": age,
+                    "gender": gender,
+                    "weight_kg": round(weight_kg, 1),
+                    "renal": f"{renal_function} mL/min ({renal_source})" if renal_function else "N/A",
+                    "alt": alt,
+                    "inr": inr,
+                    "platelets": platelets,
+                    "potassium": potassium,
+                    "comorbidities": comorbidities,
+                    "allergies": known_allergies,
+                }
+                save_to_history(patient_info, found_drugs, final_score, intervention_notes)
+
 # ==========================================
 # TAB 2: PARENTERAL (IV) DILUTION
 # ==========================================
@@ -432,21 +476,84 @@ with tab2:
             """)
 
 # ==========================================
-# TAB 3: AI CONSULT
+# TAB 3: ANALYSIS HISTORY
 # ==========================================
 with tab3:
-    st.header("🤖 AI Clinical Copilot")
-    st.info("Ask complex clinical questions that go beyond standard guidelines.")
-    user_query = st.text_area("Doctor's Query:", placeholder="e.g. Patient on Warfarin has a toothache. What is the safest painkiller?")
+    st.header("📋 Analysis History")
+    st.caption("Records are saved for this session. History resets if the app is restarted.")
 
-    if st.button("Ask AI Assistant"):
-        st.info("⚠️ **Demo Mode:** The AI Neural Engine is currently offline (API Key required).")
-        st.markdown("""
-        **System Capabilities (when online):**
-        1. Analyzes complex drug interactions not in the standard database.
-        2. References latest NICE/BNF guidelines dynamically.
-        3. Provides dosing adjustments for rare comorbidities.
-        """)
+    history = st.session_state.analysis_history
+
+    if not history:
+        st.info("No analyses performed yet in this session. Run a prescription check in the Clinical Analysis tab to see records here.")
+    else:
+        total = len(history)
+        avg_score = round(sum(r["score"] for r in history) / total, 1)
+        total_alerts = sum(r["alert_count"] for r in history)
+        high_risk = sum(1 for r in history if r["score"] < 50)
+
+        s1, s2, s3, s4 = st.columns(4)
+        s1.metric("Total Analyses", total)
+        s2.metric("Avg Safety Score", f"{avg_score}/100")
+        s3.metric("Total Alerts Fired", total_alerts)
+        s4.metric("High Risk Cases", high_risk)
+
+        st.markdown("---")
+
+        if st.button("🗑️ Clear History", type="secondary"):
+            st.session_state.analysis_history = []
+            st.rerun()
+
+        st.markdown(f"**{total} record(s) — most recent first**")
+        st.markdown("")
+
+        for i, record in enumerate(history):
+            p = record["patient"]
+            score = record["score"]
+
+            if score >= 80:
+                score_color, risk_label = "#1e8449", "Low Risk"
+            elif score >= 50:
+                score_color, risk_label = "#b7950b", "Moderate Risk"
+            else:
+                score_color, risk_label = "#c0392b", "High Risk"
+
+            drugs_str = ", ".join([d.title() for d in record["drugs"]]) if record["drugs"] else "None detected"
+            comorbid_str = ", ".join(p["comorbidities"]) if p["comorbidities"] else "None"
+            allergies_str = ", ".join(p["allergies"]) if p["allergies"] else "None"
+
+            st.markdown(f"""
+            <div class="hxcard">
+                <div class="hxcard-header">
+                    🕐 {record["timestamp"]} &nbsp;|&nbsp;
+                    <span style="color:{score_color}; font-weight:700;">
+                        Safety Score: {score}/100 — {risk_label}
+                    </span>
+                    &nbsp;|&nbsp; {record["alert_count"]} alert(s)
+                </div>
+                <div class="hxcard-body">
+                    <b>Patient:</b> {p["age"]} yr {p["gender"]} &nbsp;|&nbsp;
+                    <b>Weight:</b> {p["weight_kg"]} kg &nbsp;|&nbsp;
+                    <b>Renal:</b> {p["renal"]} &nbsp;|&nbsp;
+                    <b>ALT:</b> {p["alt"]} U/L &nbsp;|&nbsp;
+                    <b>INR:</b> {p["inr"]} &nbsp;|&nbsp;
+                    <b>Platelets:</b> {p["platelets"]} &nbsp;|&nbsp;
+                    <b>K+:</b> {p["potassium"]} mEq/L<br>
+                    <b>Comorbidities:</b> {comorbid_str} &nbsp;|&nbsp;
+                    <b>Allergies:</b> {allergies_str}<br>
+                    <b>Drugs Analyzed:</b> {drugs_str}
+                </div>
+            </div>
+            """, unsafe_allow_html=True)
+
+            with st.expander(f"📄 View Full Alert Log — Record {i+1}"):
+                if record["alerts"]:
+                    for alert in record["alerts"]:
+                        st.markdown(f"• {alert}")
+                else:
+                    st.success("No significant issues found.")
+
+            st.markdown("")
 
 # --- FOOTER ---
 st.markdown("---")
