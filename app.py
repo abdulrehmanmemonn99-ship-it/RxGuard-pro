@@ -27,7 +27,7 @@ def check_password():
         st.info("This is a restricted clinical platform. Please enter your Access Key.")
         password = st.text_input("Access Key", type="password")
         if st.button("Login", use_container_width=True):
-            if password == "medical2026":
+            if password == "k7h3dt":
                 st.session_state["password_correct"] = True
                 st.rerun()
             else:
